@@ -15,21 +15,18 @@
 (When you finish writing, update the following list using right click, then
 “Update Field”)
 
-[1 Introduction	1](#_Toc439194677)
+[1 Introduction](#_Toc439194677)
 
-[2 High-level description of the exploratory testing plan	1](#_Toc439194678)
+[2 High-level description of the exploratory testing plan](#_Toc439194678)
 
-[3 Comparison of exploratory and manual functional testing	1](#_Toc439194679)
+[3 Comparison of exploratory and manual functional testing](#_Toc439194679)
 
-[4 Notes and discussion of the peer reviews of defect reports	1](#_Toc439194680)
+[4 Notes and discussion of the peer reviews of defect reports](#_Toc439194680)
 
-[5 How the pair testing was managed and team work/effort was
-divided	1](#_Toc439194681)
+[5 Difficulties encountered, challenges overcome, and lessons
+learned](#_Toc439194682)
 
-[6 Difficulties encountered, challenges overcome, and lessons
-learned	1](#_Toc439194682)
-
-[7 Comments/feedback on the lab and lab document itself	1](#_Toc439194683)
+[6 Comments/feedback on the lab and lab document itself](#_Toc439194683)
 
 # Introduction
 
@@ -70,9 +67,6 @@ Each pair was responsible for creating an informal report of all found defects d
 
 Once the testing phase was over and new bugs were no longer being found, both groups then discussed what was found, comparing the defects to eliminate any duplicate reports and showing bugs that may have been found in one pair but not the other. Then a final list was created with the combined reports and added to our issue tracking system.
 
-# How the pair testing was managed and team work/effort was divided 
-
-Text…
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
