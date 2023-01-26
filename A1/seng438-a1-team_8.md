@@ -66,7 +66,9 @@ Lastly, there are also similarities between exploratory testing and manual funct
 
 # Notes and discussion of the peer reviews of defect reports
 
-Text…
+Each pair was responsible for creating an informal report of all found defects during the exploratory testing, it consisted of reporting said found bugs, its expected outcome and a small statement on either the state of the system before the bug occurred or steps to reproduce.
+
+Once the testing phase was over and new bugs were no longer being found, both groups then discussed what was found, comparing the defects to eliminate any duplicate reports and showing bugs that may have been found in one pair but not the other. Then a final list was created with the combined reports and added to our issue tracking system.
 
 # How the pair testing was managed and team work/effort was divided 
 
@@ -74,7 +76,10 @@ Text…
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Text…
+-   When reporting defects for exploratory testing, since there was no structure it was hard keeping track of the tests that we have already done. There were some         instances where I wrote the wrong results for certain tests so we had to rerun them to be sure.
+-   Exploratory testing expected value is based on the understanding of how we believe the system works. In some cases it was hard to determine whether a bug was found     or if a feature was intentional due to different interpretations of the system requirements
+-   During exploratory testing the same bugs were often found and reported by both groups causing duplicate reported defects in our tracking system
+-   In future assignments we could improve upon our exploratory testing by doing some more planning beforehand and creating some sort of template or structure to           follow while also having some communication between groups to avoid the previous issues we experienced
 
 # Comments/feedback on the lab and lab document itself
 
