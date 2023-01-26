@@ -76,7 +76,7 @@ Text…
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
--   When reporting defects for exploratory testing, since there was no structure it was hard keeping track of the tests that we have already done. There were some         instances where I wrote the wrong results for certain tests so we had to rerun them to be sure.
+-   When reporting defects for exploratory testing, since there was no structure it was hard keeping track of the tests that we have already done. There were some         instances where wrong results were written for certain tests so we had to rerun them to be sure.
 -   Exploratory testing expected value is based on the understanding of how we believe the system works. In some cases it was hard to determine whether a bug was found     or if a feature was intentional due to different interpretations of the system requirements
 -   During exploratory testing the same bugs were often found and reported by both groups causing duplicate reported defects in our tracking system
 -   In future assignments we could improve upon our exploratory testing by doing some more planning beforehand and creating some sort of template or structure to           follow while also having some communication between groups to avoid the previous issues we experienced
