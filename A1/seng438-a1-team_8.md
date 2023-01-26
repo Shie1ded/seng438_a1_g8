@@ -38,7 +38,11 @@ functional testing before this lab
 
 # High-level description of the exploratory testing plan
 
-Text…
+Before starting the lab, the group’s collective understanding of exploratory testing was an unstructured way of testing a system. There was no specific rule we had to follow or set of guidelines. Based on the requirement, we decide what order and what functionality we choose to test. For example, we might decide to carry out more testing on a certain feature, such as logging into a website over changing your profile picture because one feature is more important than the other. We might do testing on our system, discover a bug, and fix it in the source code without even recording it in a bug tracking tool. Exploratory testing can happen at any time in the software development process because it does not require significant planning to do this sort of testing.
+
+However, manual testing appears to be on the opposite end of the spectrum. It is a structured and inflexible form of testing. You have a script you have to follow for your test case and you cannot deviate it from it whatsoever. Every test case is tested and recorded in a bug tracking tool. The script keeps testing consistent as you make changes to the software and anyone can carry out testing because they are just following a script.
+
+Even with the differences, we noticed between both types of testing, there are still similarities. Typically, any test case will have a functionality you are testing but also an expected and actual output to indicate whether the test was successful or not. 
 
 # Comparison of exploratory and manual functional testing
 
