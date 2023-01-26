@@ -36,7 +36,7 @@ learned	1](#_Toc439194682)
 An introduction of your lab work, and what you knew about exploratory and manual
 functional testing before this lab
 
-# High-level description of the exploratory testing plan
+# High-level description of the exploratory and manual testing plan
 
 Before starting the lab, the group’s collective understanding of exploratory testing was an unstructured way of testing a system. There was no specific rule we had to follow or set of guidelines. Based on the requirement, we decide what order and what functionality we choose to test. For example, we might decide to carry out more testing on a certain feature, such as logging into a website over changing your profile picture because one feature is more important than the other. We might do testing on our system, discover a bug, and fix it in the source code without even recording it in a bug tracking tool. Exploratory testing can happen at any time in the software development process because it does not require significant planning to do this sort of testing.
 
