@@ -41,6 +41,10 @@ Even with the differences, we noticed between both types of testing, there are s
 
 # High-level description of the exploratory testing plan
 
+The first thing we did was to thoroughly read the system requirements. We went through it and highlighted all the key functionality that we were going to test for. This not just gave us an understanding of the ATM system, but it made sure we came up with high quality test cases. Afterwards, we began to interact with the ATM system. 
+
+We begin by turning on and off the ATM (and when turning the ATM on, we insert the amount of $20 bills manually). We then insert the card and input random numbers as the account number and password to see what will happen. The ATM will eject the card. After a few tries we input the correct card number but the wrong password to see what happens; if the password is wrong 3 times in a row the card is ejected. Next we enter all the information correctly to see if the ATM will log us into an account, which it did. We start by pressing random buttons with unassigned actions to see if they do anything on the ATM. Then we’ll go down the list of actions possible on the ATM, starting with withdrawal, and pressing all unassigned buttons for the action before testing whether the action itself works. We’ll make sure to test the specific action for every account on the card. We also make sure that every account that is connected to the card shows up in the options. We’ll repeat this pattern for every action on the main menu. Finally we test what happens if we try to turn the ATM off when a user is logged in on the ATM. We repeat this process for both available cards. And for both versions of the ATM machine program
+
 
 
 # Comparison of exploratory and manual functional testing
