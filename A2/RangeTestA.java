@@ -13,8 +13,11 @@ public class RangeTest {
 
     @Before
     public void setUp() throws Exception { 
+        // set up a Range that includes a negative value and a positive value
     	exampleRangePositiveNegative = new Range(-1, 1);
+        // set up a Range that only includes positive values
     	exampleRangePositive = new Range(5, 20);
+        // set up a Range that only includes negative values 
     	exampleRangeNegative = new Range(-20, -5);
     	epsilon = 0.000000001d;
     }
@@ -22,6 +25,7 @@ public class RangeTest {
     // TESTING METHOD: CONSTRAIN
     // Returns the value within the range that is closest to the specified value
     
+    // test to check whether a positive input outside the range returns the closest boundary value   
     @Test
     public void constrainPositiveInputNotInRange() {
     	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(5);
@@ -29,6 +33,7 @@ public class RangeTest {
         1.0, actualSpecifiedValue, epsilon);
     }
     
+    // test to check whether a negative input outside the range returns the closest boundary value   
     @Test
     public void constrainNegativeInputNotInRange() {
     	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-5);
@@ -36,13 +41,15 @@ public class RangeTest {
         -1.0, actualSpecifiedValue, epsilon);
     }
     
+    // test to check whether a positive input inside the range returns the input value since it is within the range   
     @Test
     public void constrainPositiveInputInRange() {
     	double actualSpecifiedValue = exampleRangePositive.constrain(10);
         assertEquals("The value within the range that is closest to the specified value should be 10",
         10.0, actualSpecifiedValue, epsilon);
     }
-    
+
+    // test to check whether a negative input inside the range returns the input value since it is within the range
     @Test
     public void constrainNegativeInputInRange() {
     	double actualSpecifiedValue = exampleRangeNegative.constrain(-10);
@@ -50,13 +57,15 @@ public class RangeTest {
         -10.0, actualSpecifiedValue, epsilon);
     }
     
+    // test to check whether a positive input way above the range returns the closest boundary value   
     @Test
     public void constrainWayAboveRange() {
     	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(10000);
         assertEquals("The value within the range that is closest to the specified value should be 1",
         1.0, actualSpecifiedValue, epsilon);
     }
-    
+
+    // test to check whether a positive input way below the range returns the closest boundary value   
     @Test
     public void constrainWayBelowRange() {
     	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-10000);
