@@ -53,11 +53,9 @@ When testing the class _org.jfree.data.DataUtilities_, we used Mock Objects for 
 
 # 3 Test cases developed
 
-**TO ADD, THIS IS WHERE WE WILL PUT OUR EXCEL FILE IN**
+Please see the excel document attached to this repository for specific details on the source code method tested and which partitions each test case covers.
 
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
+**possibly add link???**
 
 # 4 How the team work/effort was divided and managed
 
