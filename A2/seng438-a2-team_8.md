@@ -54,8 +54,7 @@ When testing the class _org.jfree.data.DataUtilities_, we used Mock Objects for 
 # 3 Test cases developed
 
 Please see the excel document attached to this repository for specific details on the source code method tested and which partitions each test case covers.
-
-**possibly add link???**
+(https://github.com/Shie1ded/seng438_g8/blob/main/A2/Data%20Utilities%20and%20Range%20Test%20Cases.xlsx)
 
 # 4 How the team work/effort was divided and managed
 
