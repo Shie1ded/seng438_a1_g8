@@ -78,8 +78,10 @@ Text…
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
 ## EclEmma
-
-## CodeCover
+- very easy to use
+- already set up in Eclipse
+- clearly shows which lines/branches are being covered and what are not 
+- does not show conditional coverage 
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
@@ -91,7 +93,7 @@ Text…
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-One difficulty encountered was importing the code coverage tools plugin into Eclipse. We were able to import and enable CodeCover into Eclipse easily; however, when we tried to run the JUnit test case with CodeCover it gave an error saying _"Plug-in “org.codecover.eclipse” was unable to instantiate class “org.codecover.eclipse.junit.JUnitLaunchConfigurationDelegate.”_ This issue made it hard to find the percentage of Conditional coverage that we had for each test class since EclEmma only has statistics for Statement and Branch coverage.   
+One difficulty encountered was finding a proper code coverage tool plugin for conditional coverage. The team used EclEmma for more of the coverage testing; however, this tool only has statistics for statement and branch coverage. We first tried to use CodeCover, which we were able to import and enable into Eclipse; but, when we tried to run the JUnit test case with CodeCover it gave an error saying _"Plug-in “org.codecover.eclipse” was unable to instantiate class “org.codecover.eclipse.junit.JUnitLaunchConfigurationDelegate.”_ From research online, it was stated that this issue could be resolved by using Eclipse Kepler; therefore, we downloaded Eclipse Kepler and tried to run our test cases, but another issue appeared. We tried to start from the very beginning and create a new java project; however, in Eclipse Kepler, the java version did not include java 1.8. Therefore, we had to find another coverage tool plugin. 
 
 # 10 Comments/feedback on the lab itself
 
