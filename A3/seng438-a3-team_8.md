@@ -67,7 +67,10 @@ INSERT TEXT HERE...
 
 # 3 A detailed description of the testing strategy for the new unit test
 
-Text…
+1. create test cases based on specifications / requirements of the method 
+2. ran the test cases with EclEmma coverage 
+3. check to see which section of the method has not been tested 
+4. for missing branch/conditional coverage, understood which condition has not been checked and create additional test cases for that case 
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
