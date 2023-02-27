@@ -67,10 +67,29 @@ INSERT TEXT HERE...
 
 # 3 A detailed description of the testing strategy for the new unit test
 
-1. create test cases based on specifications / requirements of the method 
-2. ran the test cases with EclEmma coverage 
-3. check to see which section of the method has not been tested 
-4. for missing branch/conditional coverage, understood which condition has not been checked and create additional test cases for that case 
+Goal for creating new unit test was to get as much coverage as possible.
+
+Statement Coverage: 
+- definition 
+- how to increase it 
+
+Branch Coverage: 
+- definition 
+- how to increase it 
+
+Method Coverage: 
+- definition 
+- how to increase it 
+
+What we did for each test case 
+
+1. create test cases based on specifications / requirements of the method
+- could explain more 
+3. ran the test cases with EclEmma coverage 
+4. check to see which section of the method has not been tested 
+- lines that were either red or yellow 
+6. for missing branch/conditional coverage, understood which condition has not been checked and create additional test cases for that case 
+- could explain more
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
@@ -106,9 +125,51 @@ INSERT IMAGES HERE...
 - clearly shows which lines/branches are being covered and what are not 
 - does not show conditional coverage 
 
+## Metrics 
+
+### Statement Coverage
+- identify which block of code has not yet been executed/tested
+- verify the expectation of the code 
+- does not check false conditions since it does not look at logical conditions 
+
+http://tryqa.com/what-is-statement-coverage-advantages-and-disadvantages/
+
+### Branch Coverage 
+- makes sure that no branch leads to any unusual behaviour 
+- lets you determine if a branch can be reached or not within a method 
+
+
+### Method Coverage
+- helps ensures that all methods within the class has been looked at at least once
+- only checks if the method is executed or covered by the test cases, but does not check the quality of the testing 
+
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
-Text…
+## Requirements-Based Testing
+
+Requirements-based test generation create test cases based on requirements, which may include functional tests and non-functional test cases that measures performance, reliability, and usability. 
+
+### Advantages
+- easier to plan as its well defined 
+
+### Disadvantages
+- can miss important parts of software quality as some requirements may be too vague  
+
+https://www.techtarget.com/searchsoftwarequality/tip/Pros-and-cons-of-requirements-based-software-testing
+
+## Coverage-Based Testing
+
+Coverage-based testing is a software testing metric that measures the amount of testing that has been done by a set of tests. 
+
+### Advantages
+- finds a quantitative measure that can indirectly measure the quality of the program
+- helps find areas within each method that have not been tested for yet 
+- helps find code that may not be reached; therefore, unnecessary to the program
+
+### Disadvantages
+- may miss errors if focusing solely on the code that has already been written 
+
+http://tryqa.com/what-is-test-coverage-in-software-testing-its-advantages-and-disadvantages/#:~:text=It%20creates%20additional%20test%20cases,of%20the%20application%20or%20product.
 
 # 8 A discussion on how the team work/effort was divided and managed
 
