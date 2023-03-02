@@ -41,7 +41,8 @@ Our testing suite includes unit testing for the classes, _org.jfree.data.Range_ 
 
 ## **Method X:** _org.jfree.data.DataUtilities calculateColumnTotal _
 
-INSERT TEXT HERE... 
+Link To Github
+https://github.com/Shie1ded/seng438_g8/tree/main/A3/ManualTesting/DataUtilities-calculateColumnTotal
 
 ## **Method Y:** _org.jfree.data.Range contains_
 
