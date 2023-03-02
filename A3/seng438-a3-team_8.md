@@ -108,13 +108,21 @@ INSERT IMAGES HERE...
 
 ## _org.jfree.data.Range_
 
-INSERT IMAGES HERE...
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoverage.jpg)
 
-### Statement Coverage
+We achieved a statement coverages of 86.6% but could not exceed that for the following reasons:
 
-### Branch Coverage
+Additionally, in org.jfree.data.Range, the methods getLength, getUpperBound, and getLowerBound, and expand, all have blocks of code that also cannot be reached as shown in the images below. The reason why the code cannot be reached is because it checks to see if the lower bound is less than the upper bound; however, in the Range constructor, it already checks for cases in which the lower bound is less than the upper bound and returns with an illegal argument exception accordingly. Therefore, there is no way for a Range to have a lower bound that is less than the upper bound, which means that the branch that checks for this in each of the methods above will never be executed. 
 
-### Method Coverage
+Another method that we had trouble getting 100% coverage for is contains. The reason why we could not get 100% coverage is because the final return condition can only evaluate to true, as the value to evaluate it to false is already caught with the first two if conditions. Although we have 100% coverage for the other methods, since we are unable to increase the coverage for these 4 methods, the highest statement coverage that we could report is 86.6% for the Range class. 
+
+![ ALT](../A3/DetailedCoverage/RangeCoverage/getLength.jpg)
+
+![ ALT](../A3/DetailedCoverage/RangeCoverage/getUpperBound.jpg)
+
+![ ALT](../A3/DetailedCoverage/RangeCoverage/getLowerBound.jpg)
+
+![ ALT](../A3/DetailedCoverage/RangeCoverage/expand.jpg)
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
