@@ -1,5 +1,5 @@
-// code written by Jessica Hoang
-package org.jfree.data.test;
+// code written by Jessica Hoang and Daniel Le 
+package org.jfree.data;
 
 import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
 
@@ -462,6 +462,10 @@ public class RangeTest {
     // ===================================================================================================================================
     // ASSIGNMENT 3 - WHITE BOX TEST CASES ARE BELOW
     
+    // TESTING METHOD: INTERSECTS
+    // returns true if the value specified is within the range
+
+    // test an input that is within the range (true)
     @Test
     public void intersectsRangeTrue() {
     	Range intersectRange = new Range(10,15);
@@ -470,6 +474,7 @@ public class RangeTest {
         		true, actual);
     }
     
+    // test an input that is not within the range (false)
     @Test
     public void intersectsRangeFalse() {
     	Range intersectRange = new Range(25,30);
@@ -478,6 +483,10 @@ public class RangeTest {
         		false, actual);
     }
     
+    // TESTING METHOD: SCALE
+    // returns a new range that has been scaled by a specified value
+    
+    // test a real double value 
     @Test
     public void scaleDoubleTheRange() {
     	Range actual = Range.scale(exampleRangePositive, 2);
@@ -486,11 +495,16 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // test negative inputs
     @Test (expected = IllegalArgumentException.class)
     public void scaleNegativeInput() {
     	Range.scale(exampleRangePositive, -2);
     }
     
+    // TESTING METHOD: SHIFT
+    // returns a new range that has been moved left or right by a specific value
+
+    // test shifting the range by a positive value - moving to the right 
     @Test
     public void shiftPositive() {
     	Range actual = Range.shift(exampleRangePositive, 10);
@@ -499,6 +513,7 @@ public class RangeTest {
         		expected, actual);
     }
 
+    // test shifting the range by a positive value - moving to the left 
     @Test
     public void shiftNegative () {
     	Range actual = Range.shift(exampleRangePositive, -10);
@@ -507,6 +522,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // test shifting the range by a positive value, while allowing to shift passed 0 
     @Test
     public void shiftPositiveBooleanAllowZeroCrossing() {
     	Range actual = Range.shift(exampleRangeNegative, 10, true);
@@ -515,6 +531,7 @@ public class RangeTest {
         		expected, actual);
     }
 
+    // test shifting the range by a negative value, while allowing to shift passed 0
     @Test
     public void shiftNegativeBooleanAllowZeroCrossing() {
     	Range actual = Range.shift(exampleRangePositive, -10, true);
@@ -523,6 +540,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // test shifting the range by a positive value, while not allowing to shift passed 0
     @Test
     public void shiftPositiveBooleanDoesNotAllowZeroCrossing() {
     	Range actual = Range.shift(exampleRangeNegative, 10, false);
@@ -531,6 +549,7 @@ public class RangeTest {
         		expected, actual);
     }
 
+    // test shifting the range by a negative value, while not allowing to shift passed 0
     @Test
     public void shiftNegativeBooleanDoesNotAllowZeroCrossing() {
     	Range actual = Range.shift(exampleRangePositive, -10, false);
@@ -539,6 +558,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // test shifting while the range is 0 and we cannot move pass 0
     @Test
     public void shiftNegativeOriginalBoundary0() {
     	Range exampleRange5 = new Range(0, 0);
@@ -549,6 +569,10 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // TESTING METHOD: EXPANDTOINCLUDE
+    // returns a new range that has been expanded to include a specific value
+    
+    // testing a regular set of positive inputs where the included value is not in the range
     @Test
     public void expandToIncludeNotNullRangePositive() {
     	Range actual = Range.expandToInclude(exampleRangePositive, 35);
@@ -557,6 +581,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing a regular set of negative inputs where the included value is not in the range
     @Test
     public void expandToIncludeNotNullRangeNegative() {
     	Range actual = Range.expandToInclude(exampleRangePositive, -10);
@@ -565,6 +590,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing a range that have a null value  
     @Test
     public void expandToIncludeNullRange() {
     	Range actual = Range.expandToInclude(null, 10);
@@ -573,6 +599,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing a regular set of inputs where the included value is within the range
     @Test
     public void expandToIncludeValueWithinRange() {
     	Range actual = Range.expandToInclude(exampleRangePositive, 15);
@@ -581,6 +608,10 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // TESTING METHOD: EXPAND
+    // returns a new range that has been expanded by a specific margin value
+
+    // testing inputs that are less than 100% 
     @Test
     public void expand50PercentBOTH() {
     	Range actual = Range.expand(exampleRangePositive, 0.5, 0.5);
@@ -589,6 +620,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing inputs that are greater than 100% 
     @Test
     public void expand150PercentBOTH() {
     	Range actual = Range.expand(exampleRangePositive, 1.5, 1.5);
@@ -597,6 +629,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing inputs with the lower bound less than 100 and the upper bound 0 
     @Test
     public void expand50PercentLower() {
     	Range actual = Range.expand(exampleRangePositive, 0.5, 0);
@@ -605,6 +638,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing inputs with the lower bound is 0 and the upper bound is less than 100 
     @Test
     public void expand50PercentUpper() {
     	Range actual = Range.expand(exampleRangePositive, 0, 0.5);
@@ -613,12 +647,17 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing an exception checker where the range has a lower bound less than the upper bound
     @Test (expected = IllegalArgumentException.class)
     public void getLowerUpperBoundLowerBiggerThanUpper() {
     	Range intersectRange = new Range(10,5);
     	boolean actual = exampleRangePositive.intersects(intersectRange);
     }   
     
+    // TESTING METHOD: COMBINEIGNORINGNAN
+    // returns a new range that spans both range1 and range2, while ignoring Double.NaN values
+
+    // testing combining a null range1 
     @Test
     public void combineFirstNULLIsNotNAN() {
     	Range actual = Range.combineIgnoringNaN(null, combineRange);
@@ -627,6 +666,7 @@ public class RangeTest {
         		expected, actual);
     }    
     
+    // testing combining a null range2
     @Test
     public void combineSecondNULLIsNotNAN() {
 		Range actual = Range.combineIgnoringNaN(combineRange, null);
@@ -635,6 +675,7 @@ public class RangeTest {
 	    		expected, actual);
     }
     
+    // testing combining a both null ranges 
     @Test
     public void combineBothNULLIsNotNAN() {
 		Range actual = Range.combineIgnoringNaN(null, null);
@@ -643,6 +684,7 @@ public class RangeTest {
 	    		expected, actual);
     }
     
+    // testing combining two regular ranges 
     @Test
     public void combineNotNULLIsNotNAN() {
 		Range actual = Range.combineIgnoringNaN(combineRange, exampleRangeNegative);
@@ -651,6 +693,7 @@ public class RangeTest {
 	    		expected, actual);
     }
     
+    // testing combining a null range 1 and a range 2 that has both bounds of Double.NaN
     @Test
     public void combineFirstNULLIsNAN() {
     	Range actual = Range.combineIgnoringNaN(null, combineNAN);
@@ -658,6 +701,7 @@ public class RangeTest {
         		null, actual);
     }
     
+    // testing combining both ranges with both bounds of Double.NaN
     @Test
     public void combineBothIsNAN() {
     	Range actual = Range.combineIgnoringNaN(combineNAN, combineNAN);
@@ -665,6 +709,7 @@ public class RangeTest {
         		null, actual);
     }
     
+    // testing combining a null range 1 and a range 2 that has a lower bound of Double.NaN and a regular upper bound
     @Test
     public void combineRangeLowerBoundNaNNull() {
     	Range combineNaN1 = new Range(Double.NaN, 5);
@@ -674,6 +719,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing combining a null range 1 and a range 2 that has an upper bound of Double.NaN and a regular lower bound
     @Test
     public void combineRangeUpperBoundNaNNull() {
     	Range combineNaN2 = new Range(5, Double.NaN);
@@ -683,6 +729,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing combining a null range 2 and a range 1 that has both bounds of Double.NaN
     @Test
     public void combineSecondNULLIsNAN() {
     	Range actual = Range.combineIgnoringNaN(combineNAN, null);
@@ -690,13 +737,8 @@ public class RangeTest {
         		null, actual);
     }
     
-    @Test
-    public void combineBothNULLIsNAN() {
-    	Range actual = Range.combineIgnoringNaN(combineNAN, combineNAN);
-        assertEquals("The range after being combined with two Ranges that is not-a-number should return null",
-        		null, actual);
-    }
     
+    // testing combining ranges that both have a lower bound of Double.NaN and a regular upper bound    
     @Test
     public void combineLowerBoundIsNAN() {
     	Range combineNaN1 = new Range(Double.NaN, 5);
@@ -709,6 +751,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing combining ranges that both have an upper bound of Double.NaN and a regular lower bound    
     @Test
     public void combineUpperBoundIsNAN() {
     	Range combineNaN1 = new Range(5, Double.NaN);
@@ -721,6 +764,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing combining a regular range 1 and a range 2 that has an upper bound of Double.NaN and a regular lower bound
     @Test
     public void combineIsNANMax() {
     	Range combineNaN1 = new Range(5, 15);
@@ -733,6 +777,7 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // testing combining a regular range 1 and a range 2 that has a lower bound of Double.NaN and a regular upper bound
     @Test
     public void combineIsNANMin() {
     	Range combineNaN1 = new Range(5, 15);
@@ -745,6 +790,9 @@ public class RangeTest {
         		expected, actual);
     }
     
+    // TESTING METHOD: GETCENTRALVALUE
+    // Returns the central value for the range
+    
     @Test
     public void getCentralValue() {
     	double actual = exampleRangePositive.getCentralValue();
@@ -753,6 +801,9 @@ public class RangeTest {
         assertEquals("The central value within exampleRangePositive should be the middle value of 5 and 20.",
         		expected, actual, epsilon);
     }    
+    
+    // TESTING METHOD: HASHCODE
+    // Returns a hash code
     
     @Test
     public void hashCodeIsInt() {
