@@ -98,7 +98,8 @@ Therefore, increasing branch coverage by 1 covered branches and increasing instr
 
 ## _org.jfree.data.DataUtilities_
 
-INSERT IMAGES HERE... 
+Link to pictures containing coverage for every method covered in DataUtilities
+https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtilitiesCoverage
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
