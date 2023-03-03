@@ -71,7 +71,12 @@ The goal of our testing strategy is to get as much statement, branch, and method
 
 ## DataUtilities
 
-Text.. TO ADD
+### @Test - Equal
+Equal parameters were two 2D double arrays. The methods would return true if both arrays had the same values or were both null.
+
+This methods helped increase coverage  because there was a lot of “if statement” in the equal methods so achieving 100% branch coverage for that method ensured we increased branch coverage significantly for the DataUtilities class
+
+### @Test - Clone
 
 ## Range
 
