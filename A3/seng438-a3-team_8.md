@@ -213,4 +213,4 @@ Another difficulty that we encountered that was mentioned above in our detailed 
 
 # 10 Comments/feedback on the lab itself
 
-Text…
+The instructions to set up the lab were somewhat confusing, with some of the images provided not loading for some of us. This made setting up the project file annoying. It was unclear which steps and what files from the previous assignment was needed for this lab. There was also some problems on the lab that came from the use of different coverage tools, as each tended to have their own naming schemes of the different coverage types they provided and the lab document provided very little in terms of how to use and analyze the tools. The lab also asked for task that appears impossible, with the Range class unable to reach over 90% statement coverage.
