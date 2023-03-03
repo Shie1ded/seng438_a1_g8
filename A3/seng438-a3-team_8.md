@@ -106,7 +106,16 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
 
+We achieved a statement coverages of 89.9% but could not exceed that for the following reasons. Here is the explanation of why we could not reach the minimum coverage requirement for Data.Utilities:
+ 
+calculateColumnTotal and calculateRowTotal both have a for loop that leads to an infinite loop because with r2 > rowCount and c2 > columnCount, r2 and c2 will continue to increase while rowCount and columnCount stays the same. This results in an infeasible path.
 
+For calculateColumnTotal that has a parameter of three inputs, total is initialized to 0. The line of code total > 0 can never be run because there is no way to change the total value before that condition is evaluated. 
+
+For the cumulativePercentage method, the if v != null. The statement is there  to prevent adding a null value to the total, but because all of the data that is being passed into the test case is never null, the if statement is never skipped, only testing the correct part of the code, and making it a partial error.
+Similarly, because the data being passed exists, it does not allow us to test the for loop for what happens when the data array does not exist, making the for i2>data.getItemCount() never true, which also causes the program to skip the code inside the for loop all together.
+
+The problem with removing these statements is that theoretically the program could get this type of information, thus a test must be written for it. Otherwise we are leaving unchecked vulnerabilities in our program. We are checking for these errors and expecting to receive them, and as long as we receive these errors we know our program is good. If we do receive them we will know there is something wrong with the code.
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateColumnTotal.PNG)
 
@@ -116,11 +125,7 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/getCumulativePercentages.PNG)
 
-### Statement Coverage
 
-### Branch Coverage
-
-### Method Coverage
 
 ## _org.jfree.data.Range_
 
