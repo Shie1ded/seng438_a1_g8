@@ -3,7 +3,7 @@ package org.jfree.data;
 
 import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
 
-public class RangeTest {
+public class RangeTestA3 {
     private Range exampleRangePositiveNegative;
     private Range exampleRangePositive;
     private Range exampleRangeNegative;
