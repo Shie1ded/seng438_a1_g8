@@ -190,7 +190,12 @@ This method of test generation also comes with disadvantages, for instance requi
 
 ## Coverage-Based Testing
 
-Text.. TO ADD
+In coverage-based test generation, test cases are found directly from the code. This technique measures the code in a percentage of how much the test cases have covered aspects and methods of the SUT. This helps represent how much the system is covered in a quantitative measure.
+
+This technique comes with its own advantages as well, when compared to requirements-based test generation. One advantage would be that because we are directly looking into the code, many different coverage tools are available to help the testing process. With the help of these tools coverage becomes easy to identify as they can find areas of code that have been fully tested, partially tested, or not covered at all. These coverage measurements also identify areas of code that are unreachable upon running, helping cut down on redundant lines in the program.
+
+One important disadvantage with this technique is that errors and bugs in the tested code may have been missed. In coverage-based testing, lines of code may indicate that it has been covered by a test case, but it also does not necessarily mean it is error free, as a different input or branch in the code may cause an error.
+
 
 # 8 A discussion on how the team work/effort was divided and managed
 
