@@ -102,6 +102,17 @@ INSERT IMAGES HERE...
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateColumnTotal.PNG)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateColumnTotal2.PNG)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateRowTotal.PNG)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/getCumulativePercentages.PNG)
 
 ### Statement Coverage
 
