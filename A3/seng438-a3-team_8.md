@@ -122,6 +122,9 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 
 ## _org.jfree.data.Range_
 
+Link to pictures containing coverage for every method covered in Range
+https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/RangeCoverage
+
 ![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoverage.jpg)
 
 We achieved a statement coverages of 86.6% but could not exceed that for the following reasons:
