@@ -100,7 +100,7 @@ Therefore, increasing branch coverage by 1 covered branches and increasing instr
 
 INSERT IMAGES HERE... 
 
-![ ALT](..A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
 
 ### Statement Coverage
