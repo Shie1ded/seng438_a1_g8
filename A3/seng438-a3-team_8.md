@@ -102,9 +102,8 @@ INSERT IMAGES HERE...
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/CoverageBreakdown.PNG)
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateColumnTotal.PNG)
 
