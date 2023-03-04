@@ -114,15 +114,19 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/CoverageBreakdownA2.PNG)
 
 **Instruction Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/instructionCoverageA2.PNG)
 
 **Branch Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/BranchCoverageA2.PNG)
 
 **Line Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/LineCoverageA2.PNG)
 
 **Method Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/MethodCoverageA2.PNG)
 
 
