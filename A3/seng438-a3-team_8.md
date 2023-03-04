@@ -132,18 +132,23 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 
 
 ### The below screenshot is the coverage after we added white box testing 
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/CoverageBreakdown.PNG)
 
 **Instruction Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/InstructionsCoverageA3.PNG)
 
 **Branch Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/BranchCoverageA3.PNG)
 
 **Line Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/LineCoverageA3.PNG)
 
 **Method Coverage Detail Per Method**
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/MethodCoverageA3.PNG)
 
 We achieved a statement coverages of 89.9% but could not exceed that for the following reasons. Here is the explanation of why we could not reach the minimum coverage requirement for Data.Utilities:
