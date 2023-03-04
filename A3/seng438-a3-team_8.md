@@ -108,7 +108,7 @@ Therefore, increasing branch coverage by 1 covered branches and increasing instr
 
 
 Link to pictures containing coverage for every method covered in DataUtilities for A2 Coverage
-https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtilitiesCoverage
+https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverageA2
 
 ### The below screenshot is the coverage from the test cases from Assignment 2
 
@@ -132,7 +132,7 @@ https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtiliti
 
 
 Link to pictures containing coverage for every method covered in DataUtilities for A3 Coverage
-https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverageA2
+https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage
 
 
 ### The below screenshot is the coverage after we added white box testing 
