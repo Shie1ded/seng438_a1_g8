@@ -109,10 +109,38 @@ Therefore, increasing branch coverage by 1 covered branches and increasing instr
 Link to pictures containing coverage for every method covered in DataUtilities
 https://github.com/Shie1ded/seng438_g8/tree/main/A3/DetailedCoverage/DataUtilitiesCoverage
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/CoverageBreakdown.PNG)
+### The below screenshot is the coverage from the test cases from Assignment 2
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/EachMethodCoverage.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/CoverageBreakdownA2.PNG)
 
+**Instruction Coverage Detail Per Method**
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/instructionCoverageA2.PNG)
+
+**Branch Coverage Detail Per Method**
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/BranchCoverageA2.PNG)
+
+**Line Coverage Detail Per Method**
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/LineCoverageA2.PNG)
+
+**Method Coverage Detail Per Method**
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverageA2/RangeCoverageA2/MethodCoverageA2.PNG)
+
+
+
+### The below screenshot is the coverage after we added white box testing 
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoverage.jpg)
+
+**Instruction Coverage Detail Per Method**
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoveredInstructions.jpg)
+
+**Branch Coverage Detail Per Method**
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoveredBranch.jpg)
+
+**Line Coverage Detail Per Method**
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeLine.jpg)
+
+**Method Coverage Detail Per Method**
+![ ALT](../A3/DetailedCoverage/RangeCoverage/RangeCoveredMethod.jpg)
 
 We achieved a statement coverages of 89.9% but could not exceed that for the following reasons. Here is the explanation of why we could not reach the minimum coverage requirement for Data.Utilities:
  
@@ -132,6 +160,7 @@ The problem with removing these statements is that theoretically the program cou
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/calculateRowTotal.PNG)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A3/DetailedCoverage/DataUtilitiesCoverage/getCumulativePercentages.PNG)
+
 
 
 
