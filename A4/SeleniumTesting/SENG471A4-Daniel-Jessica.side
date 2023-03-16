@@ -1,0 +1,562 @@
+{
+  "id": "4946c5fe-57c0-454b-beb2-14d25f05950c",
+  "version": "2.0",
+  "name": "SENG471A4-Daniel-Jessica",
+  "url": "https://www.amazon.ca",
+  "tests": [{
+    "id": "d1567890-adad-4b99-86bb-ec9cd4e32558",
+    "name": "T4 - Searchbar (Daniel)",
+    "commands": [{
+      "id": "373760ac-9a54-4d0c-8c53-a8782fdfae7e",
+      "comment": "",
+      "command": "open",
+      "target": "/ref=nav_logo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2929f0f4-04ba-4465-8261-ffba55aa06af",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88a51b6e-ac95-4c8f-81a2-08830dc509e7",
+      "comment": "Check if search bar accepts inputs",
+      "command": "assertEditable",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c701fea4-1962-4989-9e98-ebb8ebaf7952",
+      "comment": "",
+      "command": "click",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c28f4ada-1728-4140-a5d6-e8c7dcef6091",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nav-search-submit-button",
+      "targets": [
+        ["id=nav-search-submit-button", "id"],
+        ["css=#nav-search-submit-button", "css:finder"],
+        ["xpath=//input[@id='nav-search-submit-button']", "xpath:attributes"],
+        ["xpath=//span[@id='nav-search-submit-text']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89f7bb0e-25c9-4cd8-9757-5864cce24bf9",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Toothbrush"
+    }, {
+      "id": "e58faf5c-246e-4757-b647-9544f6884b39",
+      "comment": "",
+      "command": "click",
+      "target": "id=nav-search-submit-button",
+      "targets": [
+        ["id=nav-search-submit-button", "id"],
+        ["css=#nav-search-submit-button", "css:finder"],
+        ["xpath=//input[@id='nav-search-submit-button']", "xpath:attributes"],
+        ["xpath=//span[@id='nav-search-submit-text']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b84ae182-7b3f-4097-b056-ceb464d155a3",
+      "comment": "Site states that it is showing results for keyword Toothbrush",
+      "command": "assertText",
+      "target": "css=.a-color-state",
+      "targets": [
+        ["css=.a-color-state", "css:finder"],
+        ["xpath=//div[@id='search']/span/div/h1/div/div/div/div/span[3]", "xpath:idRelative"],
+        ["xpath=//div/span[3]", "xpath:position"]
+      ],
+      "value": "\"Toothbrush\""
+    }, {
+      "id": "c4e168fa-2d8a-48d4-8ffb-cc86fb2ea883",
+      "comment": "First Listed result contains Toothbrush",
+      "command": "assertElementPresent",
+      "target": "css=.s-desktop-content",
+      "targets": [],
+      "value": "Toothbrush"
+    }]
+  }, {
+    "id": "8c328f9b-bafc-4476-ab3f-30893502b76f",
+    "name": "T5 - Best Sellers Navigation (Daniel)",
+    "commands": [{
+      "id": "2b384ac3-f5a1-47ff-a94b-d193e0d59b08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b8ef90d-2ed0-4a25-af88-a0b447203faa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "900adfb8-cc37-45ed-8b75-b6e19db13142",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0cba07f-5cc9-4a8a-af59-278b91b4366f",
+      "comment": "Check if Best Sellers button exists",
+      "command": "assertElementPresent",
+      "target": "linkText=Best Sellers",
+      "targets": [
+        ["css=.hmenu-visible > li:nth-child(2) > .hmenu-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'Best Sellers')])[2]", "xpath:link"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "Best Sellers"
+    }, {
+      "id": "001721a9-542b-4966-bad8-37fec4956b76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hmenu-visible > li:nth-child(2) > .hmenu-item",
+      "targets": [
+        ["css=.hmenu-visible > li:nth-child(2) > .hmenu-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'Best Sellers')])[2]", "xpath:link"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "453b68b8-27a4-4ccd-9440-92611d2cf2fd",
+      "comment": "Check if current page is on Best Sellers",
+      "command": "assertText",
+      "target": "id=zg_banner_text",
+      "targets": [
+        ["id=zg_banner_text", "id"],
+        ["css=#zg_banner_text", "css:finder"],
+        ["xpath=//span[@id='zg_banner_text']", "xpath:attributes"],
+        ["xpath=//div[@id='CardInstance7WUrNvpzWMIoalDqdQNBgA']/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Amazon Best Sellers')]", "xpath:innerText"]
+      ],
+      "value": "Amazon Best Sellers"
+    }]
+  }, {
+    "id": "8de50141-e24a-48e5-86f3-60e2864b270e",
+    "name": "T6 - New Releases Navigation (Daniel)",
+    "commands": [{
+      "id": "7d83a207-c111-44a6-a54f-cba05d46e4d8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57fe83a3-1aea-4af1-8db2-349a24e39e57",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8761be50-7f8c-455f-ba9f-8a13217c92dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94800404-0730-40b2-86d8-d017422a21eb",
+      "comment": "Check if new releases button exists",
+      "command": "assertElementPresent",
+      "target": "linkText=New Releases",
+      "targets": [
+        ["linkText=New Releases", "linkText"],
+        ["css=.hmenu-visible > li:nth-child(3) > .hmenu-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'New Releases')])[2]", "xpath:link"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/new-releases/?ref_=nav_em_cs_newreleases_0_1_1_3')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": "New Releases"
+    }, {
+      "id": "e9e071f8-011a-450a-b022-5c3266575a8e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New Releases",
+      "targets": [
+        ["linkText=New Releases", "linkText"],
+        ["css=.hmenu-visible > li:nth-child(3) > .hmenu-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'New Releases')])[2]", "xpath:link"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/new-releases/?ref_=nav_em_cs_newreleases_0_1_1_3')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aabd3425-b0b6-4a11-b262-6799db9ac7ed",
+      "comment": "Check if current page is on New Releases",
+      "command": "assertText",
+      "target": "id=zg_banner_text",
+      "targets": [
+        ["id=zg_banner_text", "id"],
+        ["css=#zg_banner_text", "css:finder"],
+        ["xpath=//span[@id='zg_banner_text']", "xpath:attributes"],
+        ["xpath=//div[@id='CardInstanceiVaVNS0mJ1ErHOJrVmoI3A']/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Amazon Hot New Releases')]", "xpath:innerText"]
+      ],
+      "value": "Amazon Hot New Releases"
+    }]
+  }, {
+    "id": "e095f342-a375-4a09-b09d-75f22129a69b",
+    "name": "T3 - Save for later Cart (Jessica)",
+    "commands": [{
+      "id": "2d9cdfd3-9b5a-48f8-a4d1-d4b0cf2e0da0",
+      "comment": "",
+      "command": "open",
+      "target": "/BIC-Matic-Mechanical-Pencils-5-pack/dp/B00006IEEC/ref=sr_1_1?crid=W9UX5VUHJZ7J&keywords=pencil&qid=1678988636&sprefix=%2Caps%2C117&sr=8-1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d9ea95b-746c-471e-8216-a4e60ec50e4e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f1e883e-62f4-4f14-8ec9-f14097333749",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6eef18b3-ae14-414d-b892-9c3c89fba6e5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Go to cart",
+      "targets": [
+        ["linkText=Go to cart", "linkText"],
+        ["css=#sw-gtc .a-button-text", "css:finder"],
+        ["xpath=//a[contains(text(),'Go to cart')]", "xpath:link"],
+        ["xpath=//span[@id='sw-gtc']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/cart/view.html?ref_=sw_gtc')]", "xpath:href"],
+        ["xpath=//span/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Go to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96b36ea5-5ca6-46a9-b392-2d160951614a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sw-gtc .a-button-text",
+      "targets": [
+        ["css=#sw-gtc .a-button-text", "css:finder"],
+        ["xpath=(//a[contains(text(),'Go to cart')])[2]", "xpath:link"],
+        ["xpath=//span[@id='sw-gtc']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/cart/view.html?ref_=sw_gtc')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/span/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "effc2a83-0705-4fb2-827d-324f4d3ce575",
+      "comment": "Cart should not show 0 items",
+      "command": "assertNotText",
+      "target": "id=sc-subtotal-label-activecart",
+      "targets": [],
+      "value": "Subtotal (0 items):"
+    }, {
+      "id": "6e51ff98-5ffc-4cf2-8098-e08e1e0e06cf",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit.save-for-later.Cfbdd2360-dace-4cbc-9d6d-e74f2c253f26",
+      "targets": [
+        ["name=submit.save-for-later.Cfbdd2360-dace-4cbc-9d6d-e74f2c253f26", "name"],
+        ["css=.sc-action-save-for-later:nth-child(5) .a-color-link", "css:finder"],
+        ["xpath=//input[@name='submit.save-for-later.Cfbdd2360-dace-4cbc-9d6d-e74f2c253f26']", "xpath:attributes"],
+        ["xpath=//div[@id='sc-active-Cfbdd2360-dace-4cbc-9d6d-e74f2c253f26']/div[4]/div/div[2]/div/span[3]/span/input", "xpath:idRelative"],
+        ["xpath=//span[3]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f775257-56fb-475d-b7c8-ea9554add4a3",
+      "comment": "Check if item was moved to Save For Later.",
+      "command": "assertText",
+      "target": "css=.sc-list-item-removed-msg:nth-child(1) > .a-padding-medium:nth-child(2) > .a-size-base",
+      "targets": [
+        ["css=.sc-list-item-removed-msg:nth-child(1) > .a-padding-medium:nth-child(2) > .a-size-base", "css:finder"],
+        ["xpath=//div[@id='sc-active-C71dc7271-fce8-4c03-adc6-3fcb7a3741c8']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "BIC Matic Grip Mechanical Pencils, Black, 0.7mm, 5-pack has been moved to Save For Later."
+    }, {
+      "id": "51c79228-e78c-4d04-90c1-14c1f02767e1",
+      "comment": "At least 1 item should be in saved for later",
+      "command": "assertNotText",
+      "target": "id=sc-saved-cart-list-caption-text",
+      "targets": [
+        ["id=sc-saved-cart-list-caption-text", "id"],
+        ["css=#sc-saved-cart-list-caption-text", "css:finder"],
+        ["xpath=//div[@id='sc-saved-cart-list-caption-text']", "xpath:attributes"],
+        ["xpath=//div[@id='sc-saved-cart-list-caption-container']/h2/div", "xpath:idRelative"],
+        ["xpath=//h2/div", "xpath:position"]
+      ],
+      "value": "No items saved for later"
+    }]
+  }, {
+    "id": "ea0727b3-71e2-4d35-ad26-13a1537e6f71",
+    "name": "T2 - Update Quantity in Cart (Jessica)",
+    "commands": [{
+      "id": "47f362cb-40a4-417c-8dd6-e392fd4e9ab5",
+      "comment": "",
+      "command": "open",
+      "target": "/BIC-Matic-Mechanical-Pencils-5-pack/dp/B00006IEEC/ref=sr_1_5?crid=2LWKNZPER4YKU&keywords=pencil&qid=1678989266&sprefix=%2Caps%2C130&sr=8-5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4883d96-3162-4f94-9f1d-bc71013a017d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "671319ad-4888-495f-9520-add85a53dae3",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cc0b0c4-5cc1-41b7-ace9-e7db21bcba14",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sw-gtc .a-button-text",
+      "targets": [
+        ["css=#sw-gtc .a-button-text", "css:finder"],
+        ["xpath=(//a[contains(text(),'Go to cart')])[2]", "xpath:link"],
+        ["xpath=//span[@id='sw-gtc']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/cart/view.html?ref_=sw_gtc')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/span/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acbc3e16-4c09-46e1-b3a8-edcd3e96a888",
+      "comment": "Check current amount of items should not be 0",
+      "command": "assertNotText",
+      "target": "css=.a-dropdown-prompt",
+      "targets": [],
+      "value": "0"
+    }, {
+      "id": "d8168ea3-4fd5-401e-adb1-99f1af88e54f",
+      "comment": "Cart should not show 0 items",
+      "command": "assertNotText",
+      "target": "id=sc-subtotal-label-activecart",
+      "targets": [],
+      "value": "Subtotal (0 item):"
+    }, {
+      "id": "910ac6ab-e907-429f-922b-083604231a18",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-dropdown-prompt",
+      "targets": [
+        ["css=.a-dropdown-prompt", "css:finder"],
+        ["xpath=//span[@id='a-autoid-1-announce']/span[2]", "xpath:idRelative"],
+        ["xpath=//span/span/span/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fe3fb1f-09ed-455c-8ca4-85cec2416af3",
+      "comment": "",
+      "command": "click",
+      "target": "id=quantity_2",
+      "targets": [
+        ["id=quantity_2", "id"],
+        ["linkText=2", "linkText"],
+        ["css=#quantity_2", "css:finder"],
+        ["xpath=//a[contains(text(),'2')]", "xpath:link"],
+        ["xpath=//a[@id='quantity_2']", "xpath:attributes"],
+        ["xpath=//div[@id='a-popover-2']/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[5]", "xpath:href"],
+        ["xpath=//div[4]/div/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2ca1ac3-f0dd-4c0a-bac4-98564b67eb2a",
+      "comment": "Check current amount of items should be 2",
+      "command": "assertText",
+      "target": "css=.a-dropdown-prompt",
+      "targets": [
+        ["css=.a-dropdown-prompt", "css:finder"],
+        ["xpath=//div[@id='sc-active-Cc51f18d3-d449-4219-84d7-76a92798be44']/div[4]/div/div[2]/div/span/span/span/span/span/span/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span/span/span/span[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "f6ea1fbb-7653-44ed-85f7-a435f315c5fd",
+      "comment": "Cart should show only 2 item present",
+      "command": "assertText",
+      "target": "id=sc-subtotal-label-activecart",
+      "targets": [
+        ["id=sc-subtotal-label-activecart", "id"],
+        ["css=#sc-subtotal-label-activecart", "css:finder"],
+        ["xpath=//span[@id='sc-subtotal-label-activecart']", "xpath:attributes"],
+        ["xpath=//form[@id='activeCartViewForm']/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/div[3]/span", "xpath:position"]
+      ],
+      "value": "Subtotal (2 items):"
+    }]
+  }, {
+    "id": "a2056cd1-1fff-4df4-a098-e16c781de8dd",
+    "name": "T1 - View Orders buy it again (Jessica)",
+    "commands": [{
+      "id": "ebc3f290-702f-4f45-b69e-8e692a4c1c23",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "012ea898-d731-4a67-b366-d388b373a1fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1370x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70389a81-f4af-4636-8eb3-562f9fcb4ae7",
+      "comment": "Check if Order tab exists",
+      "command": "assertElementPresent",
+      "target": "id=nav-orders",
+      "targets": [
+        ["id=nav-orders", "id"],
+        ["css=#nav-orders", "css:finder"],
+        ["xpath=//a[@id='nav-orders']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-tools']/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/css/order-history?ref_=nav_orders_first')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": "Returns & Orders"
+    }, {
+      "id": "92ab77f5-8135-4841-b467-eb0f02bc0968",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#nav-orders > .nav-line-2",
+      "targets": [
+        ["css=#nav-orders > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'& Orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c5d0842-3e1b-4f93-bcc9-003a38846a7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-orders > .nav-line-2",
+      "targets": [
+        ["css=#nav-orders > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'& Orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4df3c6-72c9-49b9-a01a-dea7199bd3e3",
+      "comment": "Check if Buy again tab exists",
+      "command": "assertElementPresent",
+      "target": "css=.page-tabs__tab:nth-child(2) > .a-link-normal",
+      "targets": [
+        ["css=.page-tabs__tab:nth-child(2) > .a-link-normal", "css:finder"],
+        ["xpath=(//a[contains(text(),'Buy Again')])[2]", "xpath:link"],
+        ["xpath=//div[@id='a-page']/section/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/buyagain?ref_=ppx_yo2ov_dt_b_tb_buy_again')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": "Buy Again"
+    }, {
+      "id": "0e666127-2542-41d3-bf28-f4c5a377ff1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.page-tabs__tab:nth-child(2) > .a-link-normal",
+      "targets": [
+        ["css=.page-tabs__tab:nth-child(2) > .a-link-normal", "css:finder"],
+        ["xpath=(//a[contains(text(),'Buy Again')])[2]", "xpath:link"],
+        ["xpath=//div[@id='a-page']/section/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/buyagain?ref_=ppx_yo2ov_dt_b_tb_buy_again')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b0fe135-00f4-4d0a-910b-f5be8b51ca1c",
+      "comment": "Check if Buy Again page is selected",
+      "command": "assertElementPresent",
+      "target": "css=.\\_buy-again-tabs-desktop_searchAndYoStyle_selected__3kNYk",
+      "targets": [
+        ["css=.\\_buy-again-tabs-desktop_searchAndYoStyle_selected__3kNYk", "css:finder"],
+        ["xpath=//div[@id='CardInstanceugT4a41pcqBmS3OU1mry0g']/div/div[3]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Buy Again')]", "xpath:innerText"]
+      ],
+      "value": "Buy Again"
+    }]
+  }],
+  "suites": [],
+  "urls": ["https://www.amazon.ca/"],
+  "plugins": []
+}
