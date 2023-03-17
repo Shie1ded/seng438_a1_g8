@@ -51,6 +51,12 @@ With the information from the report we now are able to increase the number of t
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
+The reason we need to use mutation testing is because it allows us to test failed operations to make sure the program does not crash/freeze, and to ensure all data gets killed and does not continue running in the background.
+
+The biggest advantage of mutation testing is that it allows the programmer to test the entire source code coverage, which allows the programmer to test if the program is properly killed, along with allowing the user to test failed cases. These cases allow the programmer other ways of testing their code, since they can ensure their code is working by testing situations where the code should fail. For example, when testing null cases we cannot always send a null value to the program, so by sending other values that should fail it allows us to make sure that null values work (if nothing works then it is null).
+
+The biggest disadvantage of mutation testing is how costly it is. Because of it mutation testing takes a very long time to complete, meaning that as the size of the program increases the waiting time for the mutation testing to complete also increases, (our program took about 20 mins to finish one test). Another disadvantage of mutation testing is it usually demands testing it against the original test suite, making it more time consuming as well as inefficient.
+
 # Explain your SELENUIM test case design process
 
 Initially, we went on the amazon website and explored the website to figure out the different functionality. Each member picks two commonly used functionalities by amazon users to test on and comes up with test cases for the type of input used by the customer for both valid and invalid states. After deciding on a functionality such as clicking a button, we go on amazon and explore what type of features that comes with using that functionality. We make notes of the sequence of events that our test cases will do in order to carry out an effective test. 
@@ -59,7 +65,9 @@ Initially, we went on the amazon website and explored the website to figure out 
 
 Assertions and checkpoints are a critical element in GUI testing. The purpose of assertions and checkpoints in GUI testing is to have stages during test cases to verify whether certain aspects of the application are behaving as intended or not. With assertions we are able to verify specific conditions of GUI elements by seeing if they are present or not. Checkpoints are used to check the state of the application at particular points in time and compare what's expected to what's being shown.
 
-# how did you test each functionaity with different test data
+# How did you test each functionaity with different test data
+
+We tested each functionality by first running the mutation testing on our original code and seeing the results. Then we checked the results to see which case needs more specific testing. This allowed us to create different cases for each functionality, for example for createNumberArray we were able to create multiple test cases that checked for a pass case along with values missing/being incorrect and runtime errors. And finally we went to the base code and changed some values and matched them with test cases to make sure that the code fails if the values are incorrect. We then reran the mutation test and compared the results from the original test and the new test to ensure we solved the errors appropriately
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
