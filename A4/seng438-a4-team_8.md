@@ -19,12 +19,14 @@ The goal of this assignment is to use PitMutation for Mutation Testing and Selen
 
 # Report all the statistics and the mutation score for each test class
 
-Data Utilities Summary. Original Test Suite (77% Coverage)
+Data Utilities Summary:
+
+Original Test Suite (77% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA3_OriginalCode.PNG)
 
 
-Data Utilities Summary. Updated Test Suite (88% Coverage)
+Updated Test Suite (88% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA4_UpdatedCode.PNG)
 
