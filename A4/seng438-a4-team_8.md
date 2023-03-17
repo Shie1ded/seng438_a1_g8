@@ -61,7 +61,15 @@ Sikulix is another tool that is commonly used for GUI testing, it is a separate 
 
 # How the team work/effort was divided and managed
 
+Like previous labs, our group was divided into two groups that would work on the org.jfree.data.DataUtilities method and org.jfree.data.Range method for the mutation testing portion of the lab. Those who originally worked on those methods in previous labs would remain on them during this one. For part 2 of the lab, the GUI testing, each member designed a minimum of two test cases and recorded their automated tests in Selenium.
+
+We used Discord and Google Doc to organize our test plans, keep each other updated with our personal progress, and to help each other out when trying new coverage tools and the Selenium interface.
 
 # Difficulties encountered, challenges overcome, and lessons learned
+
+One difficulty encountered in this lab was that running the Pit tests in eclipse would often take very long, up to 30 minutes for a single run on the program. We learned to avoid running multiple tests by looking into what kinds of mutation tests were being done from the first run and edited the source code to imitate the mutations and tested as a standard JUnit test case.
+
+Another difficulty found was during the GUI testing, Selenium would open its own web browser and allow for recording, but some group members found that this separate browser would operate very slow, leading to delay in recording and in some cases crash altogether. We found that system specs were the main causes of a slow browser and had to use different machines to solve this issue.
+
 
 # Comments/feedback on the lab itself
