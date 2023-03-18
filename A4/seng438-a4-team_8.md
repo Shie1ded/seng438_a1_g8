@@ -113,7 +113,7 @@ To view a more detailed statistics of the original test suite against the DataUt
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> DataUtilitiesMutationTesting
-4. Extract the folder 'originalMutationTest.zip'
+4. Extract the folder 'DataUtilities_Html_Result_For_Original_TestCode.zip'
 5. Click on index.html
 
 
@@ -125,8 +125,7 @@ To view a more detailed statistics of the updated test suite against the DataUti
 
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
-3. Navigate to A4 -> media -> DataUtilitiesMutationTesting
-4. Extract the folder 'updatedMutationTest.zip'
+4. Extract the folder 'DataUtilities_Html_Result_For_Updated_TestCode.zip'
 5. Click on index.html
 
 ### Range Summary:
@@ -158,6 +157,8 @@ To view a more detailed statistics of the updated test suite against the Range c
 # Test Cases Added To Improve Coverage For Each Method In Ranges
 
 An overview of how we designed the test cases below was we went to each line of code within the Pit Mutation summary and checked to see which mutants had survived, we then changed our SUT to the mutations and created test cases that would fail based on the mutated SUT. To verify that we killed the mutant, we ran the test case on the original SUT to ensure that it did pass. 
+
+Major test cases that affected the mutation score the most are below:
 	
 @hashCodeTest
 
@@ -171,8 +172,38 @@ These test cases each test their respective method when they are invoked with a 
 
 This test case tests the method expand, specifically the code segment that runs when the lower boundary is greater than the upper boundary. We did not have a test case for this as we assumed that it was code that could not be reached because whenever range had a boundary lower than the upper boundary then it would be caught by the exception in the Range constructor. However, after analyzing our Pit Mutation summary we realized that a test case could be designed, where after the Range is expanded, then there may be a case that the lower boundary becomes larger than the upper boundary. With this new test case we were able to reach more line coverage and increase our mutation score by killing 47 new mutants or 3.73% 
 
-	
+Some minor test cases and the mutation it killed are below:
 
+@Test ConstrainNegated, @TestConstrainNegated
+- negated double field upper → KILLED
+- both killed 1 mutant each
+
+@Test scaleSubstitute1
+- substituted 0 with 1 → KILLED
+- greater or equal to greater than → KILLED
+- greater or equal to not equal → KILLED
+- changed conditional boundary → KILLED
+- killed 6 mutant 
+
+@Test expandZero
+- removed conditional - replaced comparison check with false → KILLED
+- negated double local variable 7 → KILLED
+- less or equal to not equal → KILLED
+- killed 3 mutants
+
+@Test equalsRemovedConditionalLower, @Test equalstoLessOrEqualLower, @Test equalstoGreaterOrEqualLower, @Test equalstoGreaterOrEqualUpper
+- removed conditional - replaced comparison check with true → KILLED
+- equal to less or equal → KILLED
+- equal to greater or equal → KILLED
+- killed 4 mutants
+
+The other test cases below were also added and killed similar mutants as the test case mentioned above. These minor test cases in total increased the mutation score by 2%.  
+- combineNegativeSecondNull
+- combineNegativeFirstNull
+- intersectLowerBoundEqualUpperBound
+- intersectJustOutsideUpperBound
+- intersectUpperBound
+- intersectLowerBound
   
 # Test Cases Added To Improve Coverage For Each Method In DataUtilities
   
