@@ -162,9 +162,9 @@ A design strategy was to come up with more test cases that tried different sets 
   
 **equal(double[][] a, double[][] b) method**
 
-TC1: a = new double[15][21], b = new double[10][20], a[1][1] = 6.7, a[1][1] = 7.8
+TC1: a = new double[15][21], b = new double[10][20], a[1][1] = 6.7, b[1][1] = 7.8
 
-TC2:  a = new double[15][21], b = new double[10][20],a[1][1] = 6.7, a[1][1] = 6.7
+TC2:  a = new double[15][21], b = new double[10][20],a[1][1] = 6.7, b[1][1] = 6.7
 
 TC3: a = {}, b = {}
 	
@@ -173,13 +173,13 @@ TC3: a = {}, b = {}
 
 TC 1: source = {}
 
-TC 2: source a double array with no null values
+TC 2: source is a double array with no null value. {{1.5, 2.7}, {5.4,6.23,7.2}, {9.5,56.6,2.8}}
 
 TC 3: source = null
 
 **calculateColumnTotal(Values2D data, int column)**
 
-values5 = [ [5.9],[7.0]] , [3.2, 4.6]]
+values5 = [[5.9,7.0] , [3.2, 4.6]]
 
 TC1: DataUtilities.calculateColumnTotal(values5, 1)
 
@@ -188,7 +188,7 @@ TC2: DataUtilities.calculateColumnTotal(null, 1)
 
 **calculateColumnTotal(Values2D data, int column, int[] validRows)**
 	
-values5 = [ [5.9],[7.0]] , [3.2, 4.6]]
+values5 = [[5.9,7.0] , [3.2, 4.6]]
 
 validRows = new int[]{0,1}
 
@@ -198,14 +198,14 @@ TC2: DataUtilities.calculateColumnTotal(null, 1, validRows)
 
 **calculateRowTotal(Values2D data, int row)**
 
-values5 = [ [5.9],[7.0]] , [3.2, 4.6]]
+values5 = [[5.9,7.0] , [3.2, 4.6]]
 
 TC1: DataUtilities.calculateRowTotal(values5, 1)
 
 TC2: DataUtilities.calculateRowTotal(null, 1)
 
 **calculateRowTotal(Values2D data, int row, int[] validCols)**
-values5 = [ [5.9],[7.0]] , [3.2, 4.6]]
+values5 = [[5.9,7.0] , [3.2, 4.6]]
 
 validColumns = new int[]{0,1}
 
