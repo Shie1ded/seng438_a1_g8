@@ -108,10 +108,22 @@ Original Test Suite (77% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA3_OriginalCode.PNG)
 
+To view a more detailed statistics of the original test suite against the DataUtilities class methods, please follow the instructions below. 
+
+1. Open the html link by [clicking here](https://link-url-here.org) 
+2. Click on "org.jfree.data"
+3. Click on "Range.java"
+
 
 Updated Test Suite (88% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA4_UpdatedCode.PNG)
+  
+To view a more detailed statistics of the updated test suite against the DataUtilities class methods, please follow the instructions below. 
+
+1. Open the html link by [clicking here](https://link-url-here.org) 
+2. Click on "org.jfree.data"
+3. Click on "Range.java"
 
 ### Range Summary:
 
@@ -119,9 +131,21 @@ Original Test Suite (71% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/RangeMutationCoverageA3_OriginalCode.jpg)
 
+To view a more detailed statistics of the original test suite against the Range class methods, please follow the instructions below. 
+
+1. Open the html link by [clicking here](https://link-url-here.org) 
+2. Click on "org.jfree.data"
+3. Click on "Range.java"
+
 Updated Test Suite (82% Mutation Coverage)
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/RangeMutationCoverageA4_UpdatedCode.jpg)
+
+To view a more detailed statistics of the updated test suite against the Range class methods, please follow the instructions below. 
+
+1. Open the html link by [clicking here](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/updatedMutationTest.html) 
+2. Click on "org.jfree.data"
+3. Click on "Range.java"
 
 # Analysis drawn on the effectiveness of each of the test classes
 
