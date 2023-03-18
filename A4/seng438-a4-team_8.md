@@ -140,7 +140,7 @@ To view a more detailed statistics of the original test suite against the Range 
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> RangeMutationTesting
-4. Extract the folder 'originalMutationTest.zip'
+4. Extract the folder 'OriginalMutationTest.zip'
 5. Click on index.html
 
 Updated Test Suite (82% Mutation Coverage)
@@ -152,8 +152,26 @@ To view a more detailed statistics of the updated test suite against the Range c
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> RangeMutationTesting
-4. Extract the folder 'updatedMutationTest.zip'
+4. Extract the folder 'UpdatedMutationTest.zip'
 5. Click on index.html
+	
+# Test Cases Added To Improve Coverage For Each Method In Ranges
+
+An overview of how we designed the test cases below was we went to each line of code within the Pit Mutation summary and checked to see which mutants had survived, we then changed our SUT to the mutations and created test cases that would fail based on the mutated SUT. To verify that we killed the mutant, we ran the test case on the original SUT to ensure that it did pass. 
+	
+@hashCodeTest
+
+This test case tests the method hashCode(). We had to create this test case as our original test suite did not specifically check the exact value of the hashCode that was being returned. Since we now checked for the exact value, any changes in the calculation would affect the final result. Therefore, by including this test case we were able to increase our mutation score by 5.16% as it killed 65 new mutants. 
+
+@Test expandNull, shiftNullRange, scaleNullRange, toStringTestEmpty
+
+These test cases each test their respective method when they are invoked with a null method. In the original test suite we did not have any test cases that did this; therefore, by adding these simple tests we were able to increase our mutation score by killing 3 new mutants.  
+
+@expandLowerGreaterThanUpper
+
+This test case tests the method expand, specifically the code segment that runs when the lower boundary is greater than the upper boundary. We did not have a test case for this as we assumed that it was code that could not be reached because whenever range had a boundary lower than the upper boundary then it would be caught by the exception in the Range constructor. However, after analyzing our Pit Mutation summary we realized that a test case could be designed, where after the Range is expanded, then there may be a case that the lower boundary becomes larger than the upper boundary. With this new test case we were able to reach more line coverage and increase our mutation score by killing 47 new mutants or 3.73% 
+
+	
 
   
 # Test Cases Added To Improve Coverage For Each Method In DataUtilities
