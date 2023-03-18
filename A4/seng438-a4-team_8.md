@@ -14,6 +14,24 @@
 
 The goal of this assignment is to use PitMutation for Mutation Testing and Selenium for GUI Testing. In Mutation testing, we were able to run PitMutation, understand which mutants our original test cases have not covered, and then create these fault versions in our SUT and created test cases to distinguish (kill) those mutants. In the report below, we will interpret our mutation scores. In GUI Testing, we focused on the Amazon website and tested key functionalities, such as add to cart, delete from cart, update item in cart quantity, save for later, navigation bar, and more. 
 
+# Source Code Changes
+
+### Range 
+
+**Original Code:**
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/SourceCodeOriginal.jpg)
+
+**Changed Code:** 
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/SourceCodeChange.jpg)
+
+To run PitMutation we had to ensure that our Assignment 3 Test Suite only had test cases that succeeded. A test case that failed was when we executed the method intersects with the parameter 4.99 and 5.0 on the range [5,20]. Since this method returned true if the specified lower boundary and upper boundary intersects with the specified range, it is expected that [4.99, 5.0] and [5, 20] return true, as it intersects at the value 5.0. However, instead, the test case failed. Therefore, we changed the source code to fix this error. In the original method, the line "if (b0 <= this.lower)" is true, and then it returns (b1 > this.lower), which is (5 > 5) = false. In the changed method, the line instead returns (b1 >= this.lower), which is (5 >= 5) = true and the test case returns as expected. We made changes to the second return line as well due to the same issue. 
+
+### DataUtilities 
+
+No changes were made to this class. 
+
 # Analysis of 10 Mutants of the Range class 
 
 In this section, we will analyse 5 mutants that our original test case had killed and 5 mutants that our original test case did not kill. 
@@ -82,22 +100,34 @@ Mutant: Incremented (a++) double local variable number 1 → SURVIVED
 
 Analysis: In this mutation, the line “return (value >= this.lower && value <= this.upper)” is replaced with “return (value++ >= this.lower && value <= this.upper).” However, since the increment to the double local variable number 1 is a post-increment, the value is returned before it is incrementing, which does not change the evaluation of the return statement at all. Therefore, we did not have any test cases that could kill this mutant in our original test and we could not create any additional ones either. 
 
-  
 # Report all the statistics and the mutation score for each test class
 
-Data Utilities Summary:
+### Data Utilities Summary:
 
 Original Test Suite (77% Mutation Coverage)
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA3_OriginalCode.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA3_OriginalCode.PNG)
 
 
 Updated Test Suite (88% Mutation Coverage)
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA4_UpdatedCode.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/DataUtilitiesMutationTesting/DataUtilitiesMutationCoverageA4_UpdatedCode.PNG)
+
+### Range Summary:
+
+Original Test Suite (71% Mutation Coverage)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/RangeMutationCoverageA3_OriginalCode.jpg)
+
+Updated Test Suite (82% Mutation Coverage)
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/RangeMutationCoverageA4_UpdatedCode.jpg)
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+As shown in the pictures above, we originally had a Mutation Coverage of 71% for the Range class and after adding addition test cases, we were able to increase the Mutation Coverage by 11%, ending with a Mutation Coverage of 82%. As for DataUtilities, we originally had a Mutation Coverage of 77% and were able to increase the Mutation Coverage also by 11%, ending with a Mutation Coverage of 88%.
+
+From these additional test cases and increases in Mutation Coverage, we can say that the effectiveness of each test class has increased as since it illustrates that we have improved he adequacy of our tests to be able to identify more defects in the code than we originally did with our Assignment 3 Test Suite. Essentially, if our test suite can actually catch problems, then we can ensure that the test class is properly working based on specifications needed.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
@@ -157,3 +187,5 @@ Another difficulty found was during the GUI testing, Selenium would open its own
 
 
 # Comments/feedback on the lab itself
+
+We spent a very long time trying to run Pit Mutation for the first time as once we ran it, the console log was flooded with red output, which made us think that we set it up wrong. An explanation of what we expect to see when we run Pit Mutation would have helped us same some time as we were debugging an issue that did not exist. Additionally, some extra explaination on Selenium would have been very helpful as it took us some time to understand the verifications and assertions used in the GUI testing tool.  
