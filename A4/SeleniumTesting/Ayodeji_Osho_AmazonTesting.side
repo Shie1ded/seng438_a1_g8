@@ -1,0 +1,224 @@
+{
+  "id": "7a82c845-4118-449b-a7db-b7951722532d",
+  "version": "2.0",
+  "name": "Ayodeji_Osho_AmazonAutomatedTesting",
+  "url": "https://www.amazon.ca/Never-Finished-Unshackle-Your-Within/dp/1544534078/ref=sr_1_3?crid=3CI3OPOFJXQF&keywords=book+goggins&qid=1679018269&sprefix=book+goggin%2Caps%2C146&sr=8-3",
+  "tests": [{
+    "id": "4802f5d9-e095-42c7-a59a-64912ef57a5b",
+    "name": "AddToCart",
+    "commands": [{
+      "id": "5a420dca-7545-4278-ab6f-5a4d7945d3d2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/Never-Finished-Unshackle-Your-Within/dp/1544534078/ref=sr_1_3?crid=3CI3OPOFJXQF&keywords=book+goggins&qid=1679018269&sprefix=book+goggin%2Caps%2C146&sr=8-3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c0b1333-fe49-489e-ab07-18b20c0f5198",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16b04e7a-f8d2-456c-9622-87082c0526f3",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Never Finished: Unshackle Your Mind and Win the War Within: Goggins, David: 9781544534077: Books - Amazon.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14f6a595-293b-4b78-ae54-ecf5ce934d20",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5228b6e1-b64d-4988-918a-478402b03b05",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sw-gtc .a-button-text",
+      "targets": [
+        ["css=#sw-gtc .a-button-text", "css:finder"],
+        ["xpath=(//a[contains(text(),'Go to cart')])[2]", "xpath:link"],
+        ["xpath=//span[@id='sw-gtc']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/cart/view.html?ref_=sw_gtc')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/span/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "573eca11-8d1c-412b-a35e-ad281fa1a006",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Amazon.ca Shopping Cart",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fb429134-8716-462b-a404-64a242a69cc8",
+    "name": "RemoveFromCart",
+    "commands": [{
+      "id": "197a31ae-51c9-4f24-8b0a-55cfdafe124a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/Never-Finished-Unshackle-Your-Within/dp/1544534078/ref=sr_1_3?crid=3CI3OPOFJXQF&keywords=book+goggins&qid=1679018269&sprefix=book+goggin%2Caps%2C146&sr=8-3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94b1dc8f-57ce-4bdb-a8f5-c11e2255b756",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e81125eb-a10f-41b1-91e5-cdc9f030c2a2",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Never Finished: Unshackle Your Mind and Win the War Within: Goggins, David: 9781544534077: Books - Amazon.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da3d6c99-5eb5-4500-8018-14ea5afead3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e5c5161-2339-4099-9330-59f6a182dd67",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sw-gtc .a-button-text",
+      "targets": [
+        ["css=#sw-gtc .a-button-text", "css:finder"],
+        ["xpath=(//a[contains(text(),'Go to cart')])[2]", "xpath:link"],
+        ["xpath=//span[@id='sw-gtc']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/cart/view.html?ref_=sw_gtc')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/span/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "310d8557-8f19-4a47-97a8-31175c8c14ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=a-autoid-1-announce",
+      "targets": [
+        ["id=a-autoid-1-announce", "id"],
+        ["css=#a-autoid-1-announce", "css:finder"],
+        ["xpath=//span[@id='a-autoid-1-announce']", "xpath:attributes"],
+        ["xpath=//span[@id='a-autoid-1']/span/span", "xpath:idRelative"],
+        ["xpath=//span/span/span/span/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b7619b6-7906-473d-a1b2-e42e3b350e12",
+      "comment": "",
+      "command": "click",
+      "target": "id=quantity_0",
+      "targets": [
+        ["id=quantity_0", "id"],
+        ["linkText=0 (Delete)", "linkText"],
+        ["css=#quantity_0", "css:finder"],
+        ["xpath=//a[contains(text(),'0 (Delete)')]", "xpath:link"],
+        ["xpath=//a[@id='quantity_0']", "xpath:attributes"],
+        ["xpath=//div[@id='a-popover-2']/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'0 (Delete)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "752e19d7-3d6c-4e14-9f5a-99a76b551c44",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Amazon.ca Shopping Cart",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "27147956-91c5-46cd-a978-44e61973c3f3",
+    "name": "ChangeLanguageFromEnglishToFrench",
+    "commands": [{
+      "id": "a7311f93-5fb1-43e6-983f-415bbd0d8622",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/Never-Finished-Unshackle-Your-Within/dp/1544534078/ref=sr_1_3?crid=3CI3OPOFJXQF&keywords=book+goggins&qid=1679018269&sprefix=book+goggin%2Caps%2C146&sr=8-3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22c8e767-d9f9-44fc-88be-53b2310524a7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f372519-9fa1-42e7-b71c-6e0f08a0b82e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icp-nav-flag",
+      "targets": [
+        ["css=.icp-nav-flag", "css:finder"],
+        ["xpath=//a[@id='icp-nav-flyout']/span/span[2]/span", "xpath:idRelative"],
+        ["xpath=//span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46056860-77fd-42ff-9fb3-8a942b1ce3b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(6) > .a-radio .a-icon",
+      "targets": [
+        ["css=.a-row:nth-child(6) > .a-radio .a-icon", "css:finder"],
+        ["xpath=//div[@id='icp-language-settings']/div[3]/div/label/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b2c7e2a-53e7-45de-8e9d-91b4937742eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-button-input",
+      "targets": [
+        ["css=.a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//span[@id='icp-save-button']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f702159-c45c-4e71-9262-493c4d36ae03",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Never Finished: Unshackle Your Mind and Win the War Within : Goggins, David: Amazon.ca: Livres",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ce97dd75-4c05-4ec9-8a2b-620a3c38bfe6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.amazon.ca/", "https://www.amazon.ca/echo-dot-4th-gen/dp/B07XJ8C8F5/ref=sr_1_6?crid=3H1HFRIAIQ95M&keywords=alexa&qid=1679017871&sprefix=alexa%2Caps%2C206&sr=8-6", "https://www.amazon.ca/Never-Finished-Unshackle-Your-Within/dp/1544534078/ref=sr_1_3?crid=3CI3OPOFJXQF&keywords=book+goggins&qid=1679018269&sprefix=book+goggin%2Caps%2C146&sr=8-3"],
+  "plugins": []
+}
