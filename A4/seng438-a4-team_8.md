@@ -113,7 +113,8 @@ To view a more detailed statistics of the original test suite against the DataUt
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> DataUtilitiesMutationTesting
-4. Open originalMutationTest.html
+4. Extract the folder 'originalMutationTest.zip'
+5. Click on index.html
 
 
 Updated Test Suite (88% Mutation Coverage)
@@ -125,7 +126,8 @@ To view a more detailed statistics of the updated test suite against the DataUti
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> DataUtilitiesMutationTesting
-4. Open updatedMutationTest.html
+4. Extract the folder 'updatedMutationTest.zip'
+5. Click on index.html
 
 ### Range Summary:
 
@@ -138,7 +140,8 @@ To view a more detailed statistics of the original test suite against the Range 
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> RangeMutationTesting
-4. Open originalMutationTest.html
+4. Extract the folder 'originalMutationTest.zip'
+5. Click on index.html
 
 Updated Test Suite (82% Mutation Coverage)
 
@@ -149,7 +152,8 @@ To view a more detailed statistics of the updated test suite against the Range c
 1. Download the repository to your local computer
 2. Extract the zipped repository folder
 3. Navigate to A4 -> media -> RangeMutationTesting
-4. Open updatedMutationTest.html
+4. Extract the folder 'updatedMutationTest.zip'
+5. Click on index.html
 
 # Analysis drawn on the effectiveness of each of the test classes
 
