@@ -143,7 +143,7 @@ Updated Test Suite (82% Mutation Coverage)
 
 To view a more detailed statistics of the updated test suite against the Range class methods, please follow the instructions below. 
 
-1. Open the html link by [clicking here](https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/updatedMutationTest.html) 
+1. Open the html link by [clicking here](https://htmlpreview.github.io/?https://github.com/Shie1ded/seng438_g8/blob/main/A4/media/RangeMutationTesting/updatedMutationTest.html) 
 2. Click on "org.jfree.data"
 3. Click on "Range.java"
 
