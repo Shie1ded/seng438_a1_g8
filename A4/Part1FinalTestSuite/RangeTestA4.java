@@ -1,190 +1,143 @@
 // code written by Jessica Hoang and Daniel Le 
-// Assignment 3 test cases rewritten and condensed
-
 package org.jfree.data;
 
 import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.*;
 
 public class RangeTestA4 {
 	private Range testRange;
-	private Range exampleRangePositiveNegative;
-	private Range exampleRangePositive;
-	private Range exampleRangeNegative;
-	private Range exampleRange1;
-	private Range exampleRange2;
-	private Range exampleRange3;
-	private Range combineRange;
+    private Range exampleRangePositiveNegative;
+    private Range exampleRangePositive;
+    private Range exampleRangeNegative;
+    private Range exampleRange1;
+    private Range exampleRange2;
+    private Range exampleRange3;
+    private Range combineRange;
 	private Range combineNAN;
-	private double epsilon;
-	
-	
-	  
-	@BeforeClass public static void setUpBeforeClass() throws Exception {
-	}
-	
-	
-	@Before
-	public void setUp() throws Exception { 
-		// set up a Range that includes a negative value and a positive value
-	  	exampleRangePositiveNegative = new Range(-1, 1);
-	      // set up a Range that only includes positive values
-	  	exampleRangePositive = new Range(5, 20);
-	      // set up a Range that only includes negative values 
-	  	exampleRangeNegative = new Range(-20, -5);
-	  	
-	  	exampleRange1 = new Range(-1, 1);
-	  	exampleRange2= new Range(-2, 2);
-	  	
-	  	combineRange = new Range (0,20);
-	  	combineNAN = new Range(Double.NaN,Double.NaN);
-	
-	
-	  	epsilon = 0.000000001d;
-	}
 
+
+    
+    private double epsilon;
+    @BeforeClass public static void setUpBeforeClass() throws Exception {
+    }
+
+
+    @Before
+    public void setUp() throws Exception { 
+        // set up a Range that includes a negative value and a positive value
+    	exampleRangePositiveNegative = new Range(-1, 1);
+        // set up a Range that only includes positive values
+    	exampleRangePositive = new Range(5, 20);
+        // set up a Range that only includes negative values 
+    	exampleRangeNegative = new Range(-20, -5);
+    	
+    	exampleRange1 = new Range(-1, 1);
+    	exampleRange2= new Range(-2, 2);
+    	
+    	combineRange = new Range (0,20);
+    	combineNAN = new Range(Double.NaN,Double.NaN);
+
+
+    	epsilon = 0.000000001d;
+    }
     
     // TESTING METHOD: CONSTRAIN
     // Returns the value within the range that is closest to the specified value
-	
-	// test to check whether a positive input outside the range returns the closest boundary value   
-	@Test
-	public void constrainPositiveInputNotInRange() {
-		double actualSpecifiedValue = exampleRangePositiveNegative.constrain(5);
-		assertEquals("The value within the range that is closest to the specified value should be 1",
-				1.0, actualSpecifiedValue, epsilon);
-	}
-  
-  // test to check whether a negative input outside the range returns the closest boundary value   
-  @Test
-  public void constrainNegativeInputNotInRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-5);
-      assertEquals("The value within the range that is closest to the specified value should be -1",
-      -1.0, actualSpecifiedValue, epsilon);
-  }
-  
-  // test to check whether a positive input inside the range returns the input value since it is within the range   
-  @Test
-  public void constrainPositiveInputInRange() {
-  	double actualSpecifiedValue = exampleRangePositive.constrain(10);
-      assertEquals("The value within the range that is closest to the specified value should be 10",
-      10.0, actualSpecifiedValue, epsilon);
-  }
+    
+    // test to check whether a positive input outside the range returns the closest boundary value   
+    @Test
+    public void constrainPositiveInputNotInRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(5);
+        assertEquals("The value within the range that is closest to the specified value should be 1",
+        1.0, actualSpecifiedValue, epsilon);
+    }
+    
+    // test to check whether a negative input outside the range returns the closest boundary value   
+    @Test
+    public void constrainNegativeInputNotInRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-5);
+        assertEquals("The value within the range that is closest to the specified value should be -1",
+        -1.0, actualSpecifiedValue, epsilon);
+    }
+    
+    // test to check whether a positive input inside the range returns the input value since it is within the range   
+    @Test
+    public void constrainPositiveInputInRange() {
+    	double actualSpecifiedValue = exampleRangePositive.constrain(10);
+        assertEquals("The value within the range that is closest to the specified value should be 10",
+        10.0, actualSpecifiedValue, epsilon);
+    }
 
-  // test to check whether a negative input inside the range returns the input value since it is within the range
-  @Test
-  public void constrainNegativeInputInRange() {
-  	double actualSpecifiedValue = exampleRangeNegative.constrain(-10);
-      assertEquals("The value within the range that is closest to the specified value should be -10.0",
-      -10.0, actualSpecifiedValue, epsilon);
-  }
-  
-  // test to check whether an input way above the range returns the closest boundary value   
-  @Test
-  public void constrainWayAboveRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(10000);
-      assertEquals("The value within the range that is closest to the specified value should be 1",
-      1.0, actualSpecifiedValue, epsilon);
-  }
+    // test to check whether a negative input inside the range returns the input value since it is within the range
+    @Test
+    public void constrainNegativeInputInRange() {
+    	double actualSpecifiedValue = exampleRangeNegative.constrain(-10);
+        assertEquals("The value within the range that is closest to the specified value should be -10.0",
+        -10.0, actualSpecifiedValue, epsilon);
+    }
+    
+    // test to check whether an input way above the range returns the closest boundary value   
+    @Test
+    public void constrainWayAboveRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(10000);
+        assertEquals("The value within the range that is closest to the specified value should be 1",
+        1.0, actualSpecifiedValue, epsilon);
+    }
 
-  // test to check whether an input way below the range returns the closest boundary value   
-  @Test
-  public void constrainWayBelowRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-10000);
-      assertEquals("The value within the range that is closest to the specified value should be -1",
-      -1.0, actualSpecifiedValue, epsilon);
-  }
+    // test to check whether an input way below the range returns the closest boundary value   
+    @Test
+    public void constrainWayBelowRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-10000);
+        assertEquals("The value within the range that is closest to the specified value should be -1",
+        -1.0, actualSpecifiedValue, epsilon);
+    }
 
-  // test to check whether an input very close to the lower boundary but still within the range returns the correct value   
-  @Test
-  public void constrainOneAboveLowerRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-0.99);
-      assertEquals("The value within the range that is closest to the specified value should be -0.99",
-      -0.99, actualSpecifiedValue, epsilon);
-  }
-  
-  // test to check whether an input very close to the lower boundary outside the range returns the correct value   
-  @Test
-  public void constrainOneBelowLowerRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-1.01);
-      assertEquals("The value within the range that is closest to the specified value should be -1",
-      -1.0, actualSpecifiedValue, epsilon);
-  }
-  
-  // test to check whether an input equal to the lower range will return the correct value   
-  @Test
-  public void constrainEqualToLowerRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-1);
-      assertEquals("The value within the range that is closest to the specified value should be -1",
-      -1.0, actualSpecifiedValue, epsilon);
-  }
-
-  // test to check whether an input very close to the upper range and outside the range will return the correct value
-  @Test
-  public void constrainOneAboveUpperRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(1.01);
-      assertEquals("The value within the range that is closest to the specified value should be 1",
-      1.0, actualSpecifiedValue, epsilon);
-  }
-
-  // test to check whether an input very close to the upper range and inside the range will return the correct value
-  @Test
-  public void constrainOneBelowUpperRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(0.99);
-      assertEquals("The value within the range that is closest to the specified value should be 0.99",
-      0.99, actualSpecifiedValue, epsilon);
-  }
+    // test to check whether an input very close to the lower boundary but still within the range returns the correct value   
+    @Test
+    public void constrainOneAboveLowerRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-0.99);
+        assertEquals("The value within the range that is closest to the specified value should be -0.99",
+        -0.99, actualSpecifiedValue, epsilon);
+    }
+    
+    // test to check whether an input very close to the lower boundary outside the range returns the correct value   
+    @Test
+    public void constrainOneBelowLowerRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-1.01);
+        assertEquals("The value within the range that is closest to the specified value should be -1",
+        -1.0, actualSpecifiedValue, epsilon);
+    }
+    
+    // test to check whether an input equal to the lower range will return the correct value   
+    @Test
+    public void constrainEqualToLowerRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(-1);
+        assertEquals("The value within the range that is closest to the specified value should be -1",
+        -1.0, actualSpecifiedValue, epsilon);
+    }
  
-  // test to check whether an input equal to the upper range will return the correct value
-  @Test
-  public void constrainEqualToUpperRange() {
-  	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(1);
-      assertEquals("The value within the range that is closest to the specified value should be 1",
-      1.0, actualSpecifiedValue, epsilon);
-  }
-  	
-	// TESTING METHOD: HASHCODE
-	// Returns a hash code
-	
-	@Test
-	public void hashCodeIsInt() {
-		assertTrue("The returned hashcode should be an int",
-	  			exampleRange1.hashCode() != Double.NaN);
-	}
-	
-	
-	// TESTING METHOD: EQUALS
-	// Tests this object for equality with an arbitrary object
-	// Returns true if object is an equivalent range and false otherwise
-  
-  // Arbitrary object is equal to tested object
-  @Test
-  public void equalsObjectEqual() {
-  	Range equalExRange1 = new Range(-1,1);
-  	assertTrue("The arbitrary object should be equal to tested object",
-  	exampleRange1.equals(equalExRange1));
-  }
-  
-  // Arbitrary object upper range is not equal to tested object
-  @Test
-  public void equalsUpperRangeNotEqual() {
-  	Range equalExRange1 = new Range(-1,3);
-  	assertFalse("The arbitrary object should not be equal to tested object",
-  	exampleRange1.equals(equalExRange1));
-  }
-  
-  // Arbitrary object is not equal to tested object
-  @Test
-  public void equalsObjectNotEqual() {
-  	assertFalse("The arbitrary object should not be equal to tested object",
-  	exampleRange1.equals(exampleRange2));
-  }
-  
-  // Arbitrary object is null
-  @Test
-  public void equalsObjectNull() {
-  	assertFalse("The arbitrary object is null and should not be equal to tested object",
-  	exampleRange1.equals(null));
-  }	
+    // test to check whether an input very close to the upper range and outside the range will return the correct value
+    @Test
+    public void constrainOneAboveUpperRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(1.01);
+        assertEquals("The value within the range that is closest to the specified value should be 1",
+        1.0, actualSpecifiedValue, epsilon);
+    }
+
+    // test to check whether an input very close to the upper range and inside the range will return the correct value
+    @Test
+    public void constrainOneBelowUpperRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(0.99);
+        assertEquals("The value within the range that is closest to the specified value should be 0.99",
+        0.99, actualSpecifiedValue, epsilon);
+    }
+   
+    // test to check whether an input equal to the upper range will return the correct value
+    @Test
+    public void constrainEqualToUpperRange() {
+    	double actualSpecifiedValue = exampleRangePositiveNegative.constrain(1);
+        assertEquals("The value within the range that is closest to the specified value should be 1",
+        1.0, actualSpecifiedValue, epsilon);
+    }
 
     // TESTING METHOD: INTERSECT
     // Returns true if the range intersects (overlaps) with the specified range, and false otherwise.
@@ -335,7 +288,7 @@ public class RangeTestA4 {
     
     // test to check if a specified range with a lower boundary that is 0.01 below the range's lower boundary returns the correct output.
     @Test
-    public void intersect1BelowLowerBound() {
+    public void intersect1BelowLowerBound() { 
     	boolean actual = exampleRangePositive.intersects(4.99, 5.0);
         assertEquals("The range DOES intersect (overlap) with the specified range",
         true, actual);
@@ -385,7 +338,7 @@ public class RangeTestA4 {
     }
     
     // Test Real input in range1 and null in range2
-    @Test
+    @Test 
     public void combineRealRange1Null() {
     	assertEquals("The new range length should be 2",
     	2, exampleRange3.combine(exampleRange1, null).getLength(), .000000001d);
@@ -404,7 +357,41 @@ public class RangeTestA4 {
     	assertNull("The new range should be null",
     			exampleRange3.combine(null, null));
     }
-        
+
+    // *TESTING METHOD: equals*
+    // Tests this object for equality with an arbitrary object
+    // Returns true if object is an equivalent range and false otherwise
+    
+    // Arbitrary object is equal to tested object
+    @Test
+    public void equalsObjectEqual() {
+    	Range equalExRange1 = new Range(-1,1);
+    	assertTrue("The arbitrary object should be equal to tested object",
+    	exampleRange1.equals(equalExRange1));
+    }
+    
+    // Arbitrary object upper range is not equal to tested object
+    @Test
+    public void equalsUpperRangeNotEqual() {
+    	Range equalExRange1 = new Range(-1,3);
+    	assertFalse("The arbitrary object should not be equal to tested object",
+    	exampleRange1.equals(equalExRange1));
+    }
+    
+    // Arbitrary object is not equal to tested object
+    @Test
+    public void equalsObjectNotEqual() {
+    	assertFalse("The arbitrary object should not be equal to tested object",
+    	exampleRange1.equals(exampleRange2));
+    }
+    
+    // Arbitrary object is null
+    @Test
+    public void equalsObjectNull() {
+    	assertFalse("The arbitrary object is null and should not be equal to tested object",
+    	exampleRange1.equals(null));
+    }
+    
     // *TESTING METHOD: contains*
     // Returns true if the specified value is within the range and false otherwise
     
@@ -471,6 +458,7 @@ public class RangeTestA4 {
     	assertTrue("The tested value -1 should be within the Range",
     	exampleRange2.contains(-1));
     }
+
     
     // ===================================================================================================================================
     // ASSIGNMENT 3 - WHITE BOX TEST CASES ARE BELOW
@@ -553,7 +541,6 @@ public class RangeTestA4 {
         		expected, actual);
     }
     
-    // DEMO! 
     // test shifting the range by a positive value, while not allowing to shift passed 0
     @Test
     public void shiftPositiveBooleanDoesNotAllowZeroCrossing() {
@@ -613,7 +600,6 @@ public class RangeTestA4 {
         		expected, actual);
     }
     
-    // DEMO !
     // testing a regular set of inputs where the included value is within the range
     @Test
     public void expandToIncludeValueWithinRange() {
@@ -661,7 +647,6 @@ public class RangeTestA4 {
         assertEquals("The range after expanding the lower margin by 50% should be 50% multiplied by the length of the range (15) and added to the upper range, the lower range does not change",
         		expected, actual);
     }
-    
     
     // testing an exception checker where the range has a lower bound less than the upper bound
     @Test (expected = IllegalArgumentException.class)
@@ -797,22 +782,29 @@ public class RangeTestA4 {
         		expected, actual, epsilon);
     }    
     
+    // TESTING METHOD: HASHCODE
+    // Returns a hash code
+    
+    @Test
+    public void hashCodeIsInt() {
+    	assertTrue("The returned hashcode should be an int",
+    			exampleRange1.hashCode() != Double.NaN);
+    }
+    
+    // TESTING METHOD: TOSTRING
+    // Returns a string
+    
+    @Test
+    public void toStringTest() {
+    	String actual = exampleRange1.toString();
+    	String expected = "Range[" + "-1.0" + "," + "1.0" + "]";
+    	assertEquals("should take the range and convert it to a string",expected, actual);
+    }
     
     // ===================================================================================================================================
     // ASSIGNMENT 4 - MUTATION TEST CASES ARE BELOW
-    
-	// TESTING METHOD: TOSTRING
-	// Returns a string
-	
-	// MUTATION TESTING: toString not tested
-	@Test
-	public void toStringTest() {
-		String actual = exampleRange1.toString();
-		String expected = "Range[" + "-1.0" + "," + "1.0" + "]";
-		assertEquals("should take the range and convert it to a string",expected, actual);
-	}
-    
-	// DEMO! 
+
+    // TEST METHOD: CONSTRAIN 
 	// MUTATION TEST: first if statement, negated upper field 
     @Test
     public void constrainNegated() {
@@ -821,7 +813,7 @@ public class RangeTestA4 {
     	assertEquals("The value within the range that is closest to the specified value should be",
     			-10, actual, epsilon);
     }
-  
+    
     // MUTATION TEST: second if statement, negated lower field 
 	@Test
 	public void constrainNegated2() {
@@ -839,367 +831,47 @@ public class RangeTestA4 {
 		assertEquals("The returned hashcode should be an int", 2118385664, actual);
 	}
 
-  
-  // MUTATION TESTING: Null value 
+	// MUTATION TESTING: Null value 
 	@Test (expected = IllegalArgumentException.class)
 	public void expandNull() {
 		Range.expand(null, 0, 0.5); // trying to expand the null range
 	}
 
-	// MUTATION TESTING:
-	@Test
-	public void expandNegative() {
-		Range actual = Range.expand(exampleRangePositive, -0.25, -0.5);
-  	Range expected = new Range(8.75, 12.5);
-		assertEquals("The range should be decreased", expected, actual);
+	// MUTATION TESTING: Null value 
+	@Test (expected = IllegalArgumentException.class)
+	public void toStringTestEmpty() {
+	  	Range testRange = new Range(-3, -10);
+	}
+	    
+	// MUTATION TESTING: Null value 
+	@Test (expected = IllegalArgumentException.class)
+	public void shiftNullRange() {
+	 	Range.shift(null, 0, true);
+	}
+	    
+	// MUTATION TESTING: Null value 
+	@Test (expected = IllegalArgumentException.class)
+	public void scaleNullRange() {
+	  	Range.scale(null, 0);
 	}
 	
-	// MUTATION TESTING:
+	// MUTATION TESTING: test when lower < upper
+	@Test
+	public void expandLowerGreaterThanUpper() {
+		Range actual = Range.expand(exampleRange1, -0.9, -0.9);
+		Range expected = new Range(0, 0);
+		assertEquals("The range should be increased", expected, actual);
+	}
+
+	// MUTATION TESTING: remove conditional, change equalities, negate
 	@Test
 	public void expandZero() {
 		Range actual = Range.expand(exampleRangePositive, 0, 0);
-  	Range expected = new Range(5, 20);
+		Range expected = new Range(5, 20);
 		assertEquals("The range should be the same", expected, actual);
 	}
-	
-	// MUTATION TESTING:
-	@Test
-	public void expandNegativeRange() {
-		Range actual = Range.expand(exampleRangeNegative, 0.25, 0.5);
-  	Range expected = new Range(-23.75, 2.5);
-		assertEquals("The range should be decreased", expected, actual);
-	}
-	
-	// MUTATION TESTING:
-	@Test
-	public void expandNegativeRangeNegativeExpand() {
-		Range actual = Range.expand(exampleRangeNegative, -0.25, -0.5);
-  	Range expected = new Range(-16.25, -12.5);
-		assertEquals("The range should be increased", expected, actual);
-	}
-	
-	// MUTATION TESTING:
-	@Test
-	public void expandLowerGreaterThanUpper_Lower() {
-		Range actual = Range.expand(exampleRange1, -0.9, -0.9);
-  	Range expected = new Range(0, 0);
-		assertEquals("The range should be increased", expected, actual);
-	}
 
-  
-  // MUTATION TESTING
-	@Test
-	public void combineNegativeFirstNull() {
-		Range actual = Range.combine(exampleRangeNegative, null); 
-		assertEquals("The combined range should be the same", exampleRangeNegative, actual);
-	}
-
-	// MUTATION TESTING
-	@Test
-	public void combineNegativeSecondNull() {
-		Range actual = Range.combine(null, exampleRangeNegative); 
-		assertEquals("The combined range should be the same", exampleRangeNegative, actual);
-	}
-
-  
-    // MUTATION TESTING: 
-	@Test
-	public void equalsRemovedConditionalLower() {
-		Range testRange = new Range(-1,1);
-		Range expectedRange = new Range(-5,1);
-		assertFalse("The arbitrary object should be not be equal to tested object",
-				testRange.equals(expectedRange));
-	}
-	
-	// MUTATION TESTING: 
-	@Test
-	public void equalstoLessOrEqualLower() {
-		Range testRange = new Range(-1,1);
-		Range expectedRange = new Range(0,1);
-		assertFalse("The arbitrary object should be not be equal to tested object",
-				testRange.equals(expectedRange));
-	}
-	
-	// MUTATION TESTING: 
-	@Test
-	public void equalstoGreaterOrEqualLower() {
-		Range testRange = new Range(-1,1);
-		Range expectedRange = new Range(-2,1);
-		assertFalse("The arbitrary object should be not be equal to tested object",
-				testRange.equals(expectedRange));
-	}
-	
-	// MUTATION TESTING: 
-	@Test
-	public void equalstoGreaterOrEqualUpper() {
-		Range testRange = new Range(-1,1);
-		Range expectedRange = new Range(-1,0);
-		assertFalse("The arbitrary object should be not be equal to tested object",
-				testRange.equals(expectedRange));
-	}
-
-	// DEMO! 
-	// MUTATION TESTING: 
-	@Test
-	public void equalsLowerDifference() {
-		testRange = new Range(1, 5);
-		Range expectedRange = new Range(3, 5);
-		assertFalse("These Range objects are equal.", testRange.equals(expectedRange));
-	}
-
-	// MUTATION TESTING: 
-	@Test
-	public void equalsUpperDifference() {
-		testRange = new Range(1, 5);
-		Range expectedRange = new Range(1, 6);
-		assertFalse("These Range objects are equal.", testRange.equals(expectedRange));
-	}
-
-    // Tested value is equal to the lower bound
-    @Test
-    public void containsMutation() {
-    	Range testRange = new Range(2, 5);
-    	boolean expected = testRange.contains(2);
-    	
-    	assertTrue("The expected output should return true because 2 is within the range", expected);
-    }
-    
-    @Test (expected = IllegalArgumentException.class)
-    public void toStringTestEmpty() {
-    	Range testRange = new Range(-3, -10);
-    	String actual = testRange.toString();
-    }
-    
-    // test shifting the range by 0 with no zero crossing
-    @Test
-    public void shiftZero0() {
-    	Range actual = Range.shift(exampleRangeNegative, 0, false);
-    	Range expected = new Range(-20, -5);
-        assertEquals("The range should be the same as it is shifted by 0",
-        		expected, actual);
-    }
-    
-    // test shifting the range by 0 with zero crossing
-    @Test
-    public void shiftZero1() {
-    	Range actual = Range.shift(exampleRangeNegative, 0, true);
-    	Range expected = new Range(-20, -5);
-        assertEquals("The range should be the same as it is shifted by 0",
-        		expected, actual);
-    }
-    
-    // test shifting the range by 0 with no zero crossing
-    @Test
-    public void shiftZero2() {
-    	Range actual = Range.shift(exampleRangeNegative, 0);
-    	Range expected = new Range(-20, -5);
-        assertEquals("The range should be the same as it is shifted by 0",
-        		expected, actual);
-    }
-    
-    // test to check if a range equal to the upper boundary of the range returns the correct output.
-    @Test
-    public void intersectUpperBound() {
-    	boolean actual = exampleRangePositive.intersects(20, 20);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    // test to check if a range equal to the lower boundary of the range returns the correct output.
-    @Test
-    public void intersectLowerBound() {
-    	boolean actual = exampleRangePositive.intersects(5, 5);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    // test to check if shift with no zero crossing does nothing.
-    @Test
-    public void shiftWithNoZeroCrossingValue0() {
-    	Range testRange = new Range(0,0);
-    	Range actual = Range.shift(testRange, 0);
-    	Range expected = new Range(0, 0);
-        assertEquals("The range should be the same as it is shifted by 0",
-        		expected, actual);
-    }
-    
-    
-    // test shifting the null range by 0 with zero crossing
-    @Test (expected = IllegalArgumentException.class)
-    public void shiftNullRange() {
-    	Range.shift(null, 0, true);
-    }
-    
-    // TESTING RANGE INITIALIZER
-    
-    @Test 
-    public void RangeInitializer() {
-    	Range testRange = new Range(-1,-1);
-    	double length = testRange.getLength();
-    	assertEquals("the length should be 0 since the upper and lower bounds are the same", 0, length, epsilon);
-    }
-    
-	@Test
-	public void shiftByNegativeDouble() {
-		Range testRange = new Range(2, 5);
-		Range expected = Range.shift(testRange, -1.5);
-		assertEquals("The shifted value should be ", 0.5, expected.getLowerBound(), epsilon);
-	}
-	
-	@Test
-	public void shiftByPositiveDouble() {
-		Range testRange = new Range(2, 5);
-		Range expected = Range.shift(testRange, 1.5);
-		assertEquals("The shifted value should be ", 3.5, expected.getLowerBound(), epsilon);
-	}
-	
-    
-    @Test (expected = IllegalArgumentException.class)
-    public void scaleNullRange() {
-    	Range.scale(null, 0);
-    }
-    
-	@Test
-	public void getCentral() {
-		Range testRange = new Range(-1, 1);
-		double actual = testRange.getCentralValue();
-		assertEquals("The central value is wrong.", 0, actual, epsilon);
-	}
-	
-	@Test
-	public void getCentralDouble() {
-		Range testRange = new Range(-1.5, 2.5);
-		double actual = testRange.getCentralValue();
-		assertEquals("The central value is wrong.", 0.5, actual, epsilon);
-	}
-	
-	@Test
-	public void getCentralDoublePositive() {
-		Range testRange = new Range(0.5, 2.5);
-		double actual = testRange.getCentralValue();
-		assertEquals("The central value is wrong.", 1.5, actual, epsilon);
-	}
-	
-	@Test
-	public void getCentral0() {
-		Range testRange = new Range(0, 0);
-		double actual = testRange.getCentralValue();
-		assertEquals("The central value is wrong.", 0, actual, epsilon);
-	}
-
-    @Test
-    public void intersect1() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(4, 6);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect2() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(4, 5);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect3() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(4, 4);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    @Test
-    public void intersect4() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(5, 4);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-
-    @Test
-    public void intersect5() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(5, 6);
-        assertEquals("The range DOES  intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect6() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(6, 7);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect7() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(6, 6);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect14() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(6, 5);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    @Test
-    public void intersect8() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(10, 11);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect9() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(10, 10);
-        assertEquals("The range DOES intersect (overlap) with the specified range",
-        true, actual);
-    }
-    
-    @Test
-    public void intersect13() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(10, 9);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    @Test
-    public void intersect10() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(11, 11);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    @Test
-    public void intersect11() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(11, 12);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    @Test
-    public void intersect12() {
-    	Range testRange = new Range(5, 10);
-    	boolean actual = testRange.intersects(11, 10);
-        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
-        false, actual);
-    }
-    
-    
+	// MUTATION TESTING: substitute 0 with 1
     @Test
     public void scaleSubstitute1() {
     	Range testRange = new Range(-1,1);
@@ -1209,6 +881,91 @@ public class RangeTestA4 {
         		expected, actual);
     }
     
+    // MUTATION TESTING
+  	@Test
+  	public void combineNegativeFirstNull() {
+  		Range actual = Range.combine(exampleRangeNegative, null); 
+  		assertEquals("The combined range should be the same", exampleRangeNegative, actual);
+  	}
+
+  	// MUTATION TESTING
+  	@Test
+  	public void combineNegativeSecondNull() {
+  		Range actual = Range.combine(null, exampleRangeNegative); 
+  		assertEquals("The combined range should be the same", exampleRangeNegative, actual);
+  	}
+  	
+    // MUTATION TESTING: 
+    @Test
+    public void intersectLowerBoundEqualUpperBound() {
+    	Range testRange = new Range(5, 10);
+    	boolean actual = testRange.intersects(10, 9);
+        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
+        false, actual);
+    }
+    
+    // MUTATION TESTING: 
+    @Test
+    public void intersectJustOutsideRange() {
+    	Range testRange = new Range(5, 10);
+    	boolean actual = testRange.intersects(11, 11);
+        assertEquals("The range DOES NOT intersect (overlap) with the specified range",
+        false, actual);
+    }
+    
+    // MUTATION TESTING: remove the conditional for the lower boundary
+	@Test
+	public void equalsRemovedConditionalLower() {
+		Range testRange = new Range(-1,1);
+		Range expectedRange = new Range(-5,1);
+		assertFalse("The arbitrary object should be not be equal to tested object",
+				testRange.equals(expectedRange));
+	}
+	
+	// MUTATION TESTING: change condition for the lower boundary to equal to less or equal 
+	@Test
+	public void equalstoLessOrEqualLower() {
+		Range testRange = new Range(-1,1);
+		Range expectedRange = new Range(0,1);
+		assertFalse("The arbitrary object should be not be equal to tested object",
+				testRange.equals(expectedRange));
+	}
+	
+	// MUTATION TESTING: change condition for the lower to greater or equal 
+	@Test
+	public void equalstoGreaterOrEqualLower() {
+		Range testRange = new Range(-1,1);
+		Range expectedRange = new Range(-2,1);
+		assertFalse("The arbitrary object should be not be equal to tested object",
+				testRange.equals(expectedRange));
+	}
+	
+	// MUTATION TESTING: change condition for the upper to greater or equal
+	@Test
+	public void equalstoGreaterOrEqualUpper() {
+		Range testRange = new Range(-1,1);
+		Range expectedRange = new Range(-1,0);
+		assertFalse("The arbitrary object should be not be equal to tested object",
+				testRange.equals(expectedRange));
+	}
+
+    // MUTATION TESTING: test to check if a range equal to the upper boundary of the range returns the correct output.
+    @Test
+    public void intersectUpperBound() {
+    	boolean actual = exampleRangePositive.intersects(20, 20);
+        assertEquals("The range DOES intersect (overlap) with the specified range",
+        true, actual);
+    }
+    
+    // MUTATION TESTING: test to check if a range equal to the lower boundary of the range returns the correct output.
+    @Test
+    public void intersectLowerBound() {
+    	boolean actual = exampleRangePositive.intersects(5, 5);
+        assertEquals("The range DOES intersect (overlap) with the specified range",
+        true, actual);
+    }
+
+	
     @After
     public void tearDown() throws Exception {
     }
