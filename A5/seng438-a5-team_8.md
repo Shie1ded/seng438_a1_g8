@@ -31,21 +31,44 @@ In the failure data given, FailureReport2 was used. The format was modified and 
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Time_Between_Failure.PNG)
 
+In the Time between Failure graph we see that as the number of failures increase so does the time between each failure, we can also see as part of the raw data that failures come in groups, most likely due to the fact that one failure tends to lead to a few others. Once a failure (and its corresponding failures) are solved, the time to the next failure increases greatly.
+
+When looking at the geometric data we can see that as we find more failures the deviation from the ideal behavior of the program increases hence the time between failures also increases.
+
+Looking at the Jelinski-Moranda data, we can see that it is very similar to the geometric for most of the failures found, but as we reach the last failures we found, the estimation of time between each failure increases drastically compared to geometric. This supports the idea that the Jelinski-Moranda provides over-optimistic results as more failures are found. This is caused due to a belief that, although the number of errors is unknown, it is fixed and constant.
+
 ### Failure Rate
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/FailureIntensity.png)
+
+The Failure Rate graph shows the average of failures per second, and the cumulative time between each failure. By looking at the Raw data we can see once again that as the time between failures increases the number of failures per second decreases, meaning that with a few outliers the longer it takes for another failure to occur, the less failures occur.
+
+When looking at the geometric data we can see that even though the sets remain relatively the same when it comes to failures per second, there are more failures per second at the beginning. This could be due to the fact that there is less time between each failure, causing more deviations from the ideal behavior expected from the program.
+
+Looking at the Jelinski-Moranda data, we can see that it is very similar to the geometric for most of the failures found, although the data-sets start at a lower failure per second value. This is most likely due to its over-optimistic nature detecting less errors which correspond to the initial failure.
 
 ### Reliability 
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Reliability.PNG)
 
+The Reliability graph shows the average reliability of the code between each failure. We can see from the raw data that as the time between failures increases so does the reliability of the code. Meaning that every failure that gets fixed improves the overall code.
+
+Looking at the geometric data-sets that as the program becomes more reliable, deviations from the program's intended behavior become less frequent, meaning the program is more reliable.
+
+Though the Jelinski-Moranda data-sets follow a somewhat similar trajectory, they have much greater fluctuations. When looking at the initial data we can see the over optimistic sets once again, but as we continue and more faults are found the model underdelivers due to its initial estimations. Then as we reach the end sets we can see that the over-optimism of this model comes into play as it believes that most of the initial constant errors are gone. Though this method is not always accurate, using it compared to the geometric model will actually create a more balanced average from the sets on the graph
+
 ### LaPlace Test
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/LaPlaceTest.PNG)
 
+This graph is a representation of the Laplace test values compared to the number of failures which occur. When looking at the graph and its data we can see that the system begins with no change in its reliability. This “no trend” in the reliability of the system continues until we get to failure 40, at which set the program begins to grow in reliability, a trend which continues until the last found failure
+
+
 ### Arithmetic mean test
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Running_Mean.PNG)
+
+The Arithmetic mean graph shows us its average mean per failure number. We can see an overall trend with the raw data that tells us the mean increases as more failures are found. Since we know that the higher the mean, the more reliable the program. We can conclude from the data that as more failures are found and fixed, the more reliable the program becomes. When looking at the last 10 failures however we can see that there is no increase in mean (i.e. no increase in reliability) this happens because in reality it is next to impossible to reach 100% reliability with any code created. This also tells us that continuing to test the system will likely not improve its reliability in any significant way.
 
 ## A Discussion on Decision Making Given a Target Failure Rate 
 
