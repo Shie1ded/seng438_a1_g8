@@ -17,9 +17,17 @@ The goal of this assignment is to use reliability assessment tools to assess fai
 
 ## Result of the Model Comparison (selecting top two models)
 
+For all graphs, Geometric and Jelinski-Moranda were used for modeling.
+
 ## Result of Range Analysis (an explanation of which part of data is good for proceeding with the analysis) 
 
+We ignored the first 5 datasets since initially the system was unstable. This allows us to get a much better representation of the datasets and any trends they have, it also provides more accurate averages when looking at any data from the graphs. Removing the first few and nothing else also allows us to keep a large enough sample for the system to be accurate when running the tests, thus giving more precise results from our data.
+
 ## Plots for Failure Rate and Reliability of the SUT for the Test Data Provided 
+
+In the failure data given, FailureReport2 was used. The format was modified and converted to a DAT file so it can be analyzed using CASRE. 
+
+Time Between Failure
 
 ## A Discussion on Decision Making Given a Target Failure Rate 
 
