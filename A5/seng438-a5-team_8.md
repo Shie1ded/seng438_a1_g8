@@ -27,29 +27,35 @@ We ignored the first 5 datasets since initially the system was unstable. This al
 
 In the failure data given, FailureReport2 was used. The format was modified and converted to a DAT file so it can be analyzed using CASRE. 
 
-# Time Between Failure
+### Time Between Failure
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Time_Between_Failure.PNG)
 
-# Failure Rate
+### Failure Rate
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/FailureIntensity.png)
 
-# Reliability 
+### Reliability 
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Reliability.PNG)
 
-# LaPlace Test
+### LaPlace Test
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/LaPlaceTest.PNG)
 
-# Arithmetic mean test
+### Arithmetic mean test
 
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Running_Mean.PNG)
 
 ## A Discussion on Decision Making Given a Target Failure Rate 
 
+We believe that a 0.0015 failure per second average rate is very good. This means that our goal is not to hit a 0.0015 failure per second rate once, but to improve our program enough that our overall average is 0.0015. This also means that we ignore the first 5 datasets we test, these tests will most likely yield a large failure rate, and since we simply are trying to configure the system and achieve a more stable state for the system to begin testing on, these first few datasets will only throw the values out of balance. We also decided on a limit of 100 failures before we accept the failure average we get and proceed with improving the code more, then retesting the system.
+
 ## A Discussion on the Advantages and Disadvantages of Reliability Growth Analysis 
+
+Advantage: reducing frequency of failures improves reliability, reduces costs later on by lowering the possibility of the program malfunctioning or failing all together, improves customer satisfaction, and provides great feedback.
+
+Disadvantage: some disadvantages of reliability growth analysis are that it needs a large amount of data to be viable. It can be time consuming to run this, especially if we are doing it on multiple iterations of the code. It also has a large initial cost to implementation, meaning it is looked at as an investment, and the company needs to have the initial cost in order to implement it. And finally, this type of coding could be very difficult to interpret, especially for newer workers.
 
 # Assessment Using Reliability Demonstration Chart 
 
