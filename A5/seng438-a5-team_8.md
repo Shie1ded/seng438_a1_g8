@@ -28,8 +28,12 @@ We ignored the first 5 datasets since initially the system was unstable. This al
 In the failure data given, FailureReport2 was used. The format was modified and converted to a DAT file so it can be analyzed using CASRE. 
 
 Time Between Failure
+
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/Time_Between_Failure.PNG)
 
+Failure Rate
+
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/FailureIntensity.png)
 
 ## A Discussion on Decision Making Given a Target Failure Rate 
 
