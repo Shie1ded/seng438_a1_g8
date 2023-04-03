@@ -33,7 +33,7 @@ In the failure data given, FailureReport2 was used. The format was modified and 
 
 # Failure Rate
 
-![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/FailureIntensity.PNG)
+![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/FailureIntensity.png)
 
 # Reliability 
 
