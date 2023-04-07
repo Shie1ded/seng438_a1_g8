@@ -110,11 +110,11 @@ Afterwards, we adjusted the MTTF for the other adjusted graphs to show what the 
 
 ## A Discussion on the Advantages and Disadvantages of RDC
 
-The advantage of using RDC is that it is versatile, not expensive and a quick way to analyze the reliability of a system. RDC provides a clear and visual representation of the systems reliability, which in turn allows for a easy way to track the progress of the system during phases of testing or completion and can be tweeked to meet the required reliability and quality level.
+The advantage of using RDC is that it is a very flexible tool. It is not expensive and a quick way to analyze the reliability of a system as all you need is an excel sheet at most. RDC also provides a clear and visual representation of the systems reliability, which in turn allows for a easy way to track the progress of the system during phases of testing or completion and can be tweeked to meet the required reliability and quality level.
 
 The disadvantage of using RDC is that it cannot be use used to calculate the exact quantitative value for reliability of the system under test (SUT) as it can only tell the user if the SUT is within an acceptable range or not. Another disadvtantage would be that because RDC is dependant on testing over time, to acquire large amounts of data, a large amount of time is needed per chart, and if multiple charts or versions need to be generated, it make it very expensive.
 
-Additionally, since it is  cost efficient, it is possible to test out different what-if scenarios by changing the confidence levels and MTTF. However, this can also be seen as a disadvantage as although it is possible, it can be a tedious process. 
+Additionally, since it is cost efficient, it is possible to test out different what-if scenarios by changing the confidence levels and MTTF. However, this can also be seen as a disadvantage as although it is possible, it can be a tedious process. 
 
 # Comparison of Results
 
