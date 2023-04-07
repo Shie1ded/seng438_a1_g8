@@ -119,7 +119,17 @@ Additionally, since it is cost efficient, it is possible to test out different w
 
 # Comparison of Results
 
+Part 1 uses failureReport2 and Part 2 uses DATA1. Both data collected are time between failures. For both dataset, their results using RDC and Reliability Growth Testing indicate that the system is becoming more reliable over time when the time between failure increases. For  Reliability Growth Testing, the reliability graph is increasing and the failure rate graph is decreasing over time which are good indicators the system is becoming more stable. However, in the results for RDC, after we decided on a maximum failure rate for the system, initially we start off in the acceptable range, but as time between failure increases, we start to shift towards the continue test region.
+
+For RDC we focus on using MTTF as a target to analyze the reliability of a system, here we found that the system meets the reliability requirement under an MTTF of 0.15. As for the Reliability Growth testing we focused on a target failure rate, which 0.0015 was chosen. If we convert the MTTF chosen in Part 2 to a failure rate, then we would get a targeted failure rate of 6.66. Therefore, given the two different dataset we used, we can see that we chose a targeted failure rate that works well with the specific system under test. Furthermore, the results from Part 1 provided a more nominal result as it was either a reject/accept answer and given our MTTF and failure data we accepted the system. While the Reliability Growth Testing provided a more quantitative result throughout the graphs, indicating the trends of the system and as mentioned above, the system becomes more reliable and stable as time continues. 
+
+A difference in results is that in the Reliability Growth Testing it is mentioned that continuing to test the system will likely not improve its reliability in any significant way. However, in the RDC results, since there are failure data that falls within the “continue test” region, we can conclude that additional testing may be necessary to improve the system’s reliability, but we cannot guarantee that adding more tests can move the system under test into the accept region.
+
 # Discussion on Similarity and Differences of the Two Techniques
+
+Similarities are both RDC and Reliability Growth Testing require time between failure data. They are both good indicators for the reliability of a system. For RDC, if you are within the acceptable range and for Reliability Growth Testing, if the reliability graph is approaching one or the failure rate graph is approaching zero then you can be confident that less testing is required.
+
+Differences are that Reliability Growth Testing is used during the development phase of the system, while RDC is typically used to demonstrate the reliability of the product during a finished build. Both methods are used to make different types of decisions. RDC helps decide whether to reject or accept a system. Reliability Growth Testing decides the extent of bugs in software before release and can forecast the best time to release a product in the future. 
 
 # How the team work/effort was divided and managed
 
