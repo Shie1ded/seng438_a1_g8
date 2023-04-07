@@ -84,7 +84,7 @@ Disadvantage: some disadvantages of reliability growth analysis are that it need
 
 ## 3 Plots for MTTFmin, Twice and Half of it for your Test Data
 
-We used "time between failures" data from DATA1.DAT for this section and for each chart we made "per Number of input events" to be 1000.
+We used "time between failures" data from DATA1.DAT for this section and for each chart we made "per Number of input events" to be 1000. Additionally, we only used the first 7 failure observed in the data file as additional data added to the RDC excel did not reflect in "R Demo Chart."
 
 ### MTTFMin
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/MTTFMin.jpg)
