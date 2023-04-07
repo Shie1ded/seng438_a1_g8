@@ -89,21 +89,22 @@ We used "time between failures" data from DATA1.DAT for this section and for eac
 ### MTTFMin
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/MTTFMin.jpg)
 
-For this chart, we chose the maximum acceptable number of failures to be 150, and the MTTF is 0.15 (150 / 1000).
+For this chart, we chose the maximum acceptable number of failures to be 150, and the MTTF is 0.15 (150 / 1000). 
 
-What we can see in this chart is that as the number of input events increases, the number of failures also increases, going from an acceptable range to a "continue" range. This result means that given a maximum acceptable number of failures of 150, there will need to be additional tests done to get the system under test to be an acceptable product. 
+What we can see in this chart is that as the number of input events increases, the number of failures also increases, going from an acceptable range to a "continue test" range. This result means that given a maximum acceptable number of failures of 150, the failure rate of the system is consistent and may indicate that the system may not substantially degrade over time. Furthermore, since it is within the "continue test" region, there may need to be additional tests done to for the system to improve its reliability and to be fully within the accept region 
 
 ### TwiceMTTFMin
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/TwiceMTTFMin.jpg)
 
-For this chart, we doubled the original maximum acceptable number of failures of 150, giving us 300, and the MTTF is 0.3 (300 / 1000). When we double the original MTTF we increase the maximum acceptable number of failures; therefore, in the chart we can see that all the failure observed is now within the acceptable range and no additional tests needs to be done for the system under test.    
+For this chart, we doubled the original maximum acceptable number of failures of 150, giving us 300, and the MTTF is 0.3 (300 / 1000). When we double the original MTTF we increase the maximum acceptable number of failures; therefore, in the chart we can see that all the failure observed is now within the acceptable range. This result shows that the system's reliability target has been met, providing a high degree of confidence that the system will perform as needed.     
 
 ### HalfMTTFMin
 ![ ALT](https://github.com/Shie1ded/seng438_g8/blob/main/A5/PlottedGraphs/HalfMTTFMin.jpg)
 
-For this chart, we took half of the original maximum acceptable number of failures of 150, giving us 75, and the MTTF is 0.075 (75 / 1000). When we take half of the original MTTF we decrease the maximum acceptable number of failures; therefore, in the chart we can see that most of the failure observed is now within the continue range, and we have one within the reject range. This result means that the system under test should be rejected.
+For this chart, we took half of the original maximum acceptable number of failures of 150, giving us 75, and the MTTF is 0.075 (75 / 1000). When we take half of the original MTTF we decrease the maximum acceptable number of failures; therefore, in the chart we can see that most of the failure observed is now within the continue range, and we have one within the reject range. This result means that the system under test is unacceptable and should be rejected.
 
 ## Explain your Evaluation and Justification of how you Decided the MTTFmin
+
 We choose our original MTTF based on a 1/7 ratio, which helped keep all failure observed points within the reject, continue, or acceptable region. We chose our "per number of input events" to be 1000, as the context of the data that we used in DATA1.DAT stated that "the software system from which the data were collected is a compiler project in a university in Japan and the system had about 1000 lines of code." Using this 1000, to find the 1/7 ratio we used trial and error choosing the maximum acceptable number of failures on the RDC excel. Moreover, we chose an MTTF of 0.15 (150 / 1000) as none of the failure observed falls within the reject region and most of the failure observed is within the "continue test" region instead, which is a good starting point for the system under test as more tests will eventually lead to it becoming acceptable. 
 
 Afterwards, we adjusted the MTTF for the other adjusted graphs to show what the system would look like if we were to double the allowed amounts of failures to represent a more leniant and forgiving system in terms of the allowance for error. The opposite was done to represent a more strict system where the allowed failures were halfed from the original. MTTF is generally determined from the requirements and expectations of a product, which ensures that the product meets the reliability for its intended use.
