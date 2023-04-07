@@ -138,5 +138,3 @@ The team was divided into two groups, the first pair worked on Part 1, reliabili
 # Difficulties encountered, challenges overcome, and lessons learned
 
 Some difficulties encountered during Part 2 of the lab is the use of SRTAT and RDC excel. First, when trying to use SRTAT we were unable to successfully import the failure data .DAT files provided in the assignment's specifications. What we had to do was either use excel and copy and paste the data into excel to create our own .DAT file or open up the sample .DAT file given in the SRTAT tool itself and edit it with the failure data. We also had issues using the RDC excel as the file was in protected view and we could insert the failure data properly until it was unprotected. 
-
-# Comments/feedback on the lab itself
